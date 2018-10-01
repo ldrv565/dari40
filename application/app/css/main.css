@@ -1,0 +1,102 @@
+.aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-height: 500px;
+    width: 15.38462vw;
+    background: black;
+    color: white;
+}
+
+.container {
+    position: absolute;
+    top: 3.84615vw;
+    right: 3.84615vw;
+    width: 76.92308vw;
+}
+
+.header {
+    text-transform: uppercase;
+}
+
+.header__title {
+    font-size: 24px;
+}
+
+.header__subtitle {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 1.15385vw 0;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1.15385vw 0;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.category__item {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.category__item--active {
+    background: pink;
+    color: white;
+}
+
+.category__item:hover {
+    background: pink;
+    color: white;
+}
+
+.nav_panel__sort_label {
+    font-weight: bold;
+}
+
+.nav_panel__sort_item {
+    cursor: pointer;
+}
+
+.nav_panel__sort_item--active {
+    color: pink;
+}
+
+.nav_panel__sort_item:hover {
+    color: pink;
+}
+
+.card {
+    width: 18.36538vw;
+    margin-bottom: 1.15385vw;
+    text-align: center;
+}
+
+.card__image {
+    height: 21.92308vw;
+}
+
+.card__name {
+    padding: 0.57692vw;
+}
+
+.card__price {
+    font-weight: bold;
+}

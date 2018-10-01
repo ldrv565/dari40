@@ -1,0 +1,92 @@
+//<сетка>
+$columns: 26
+$atom: 100vw / 26
+$aside_width: 4 * $atom
+$container_width: 20 * $atom
+$offset: $atom * .3
+//</сетка>
+
+//<основные_контейнеры>
+.aside
+    position: fixed
+    top: 0
+    left: 0 
+    height: 100vh
+    min-height: 500px
+    width: $aside_width
+    background: black
+    color: white
+
+.container
+    position: absolute
+    top: $atom
+    right: $atom
+    width: $container_width
+
+.header
+    text-transform: uppercase
+    &__title
+        font-size: 24px
+    &__subtitle
+        display: flex
+        justify-content: space-between
+        font-size: 18px       
+        padding: $offset 0
+
+.main
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin: $offset 0
+//</основные_контейнеры>
+    
+//<блоки>
+    //<глобальные_блоки>
+.image
+    position: relative
+    width: 100%
+    height: 100%
+    overflow: hidden
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+    //</глобальные_блоки>
+    //<блоки_header>
+.category
+    &__item
+        padding: 5px
+        cursor: pointer
+        &--active
+            background: pink
+            color: white
+        &:hover
+            background: pink
+            color: white
+        
+.nav_panel
+    &__sort_label
+        font-weight: bold
+    &__sort_item
+        cursor: pointer
+        &--active
+            color: pink
+        &:hover
+            color: pink
+    //</блоки_header>
+    //<блоки_main>
+.card
+    width: ($container_width / 4 ) - $offset/4*3
+    margin-bottom: $offset
+    text-align: center
+    &__image
+        height: $atom * 5.7
+    &__add_mini_button
+    &__add_icon
+    &__name
+        padding: $offset*.5
+    &__price
+        font-weight: bold
+    //</блоки_main>
+//</блоки>
