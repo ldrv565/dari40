@@ -7,6 +7,7 @@ $offset: $atom * .3
 //</сетка>
 //<цвета>
 $grey: #131313
+$light_grey: #464646
 //</цвета>
 //<брейкпоинты>
 $extra_large: "max-width: 1550px"
@@ -150,6 +151,7 @@ h1, h2, h3
 .image
     position: relative
     width: 100%
+    height: 100%
     overflow: hidden
     &__img
         position: absolute
@@ -288,5 +290,63 @@ h1, h2, h3
     &:hover
         .card__add_mini_button
             display: flex
+
+.product
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 100%
+    &__image-wrap
+        flex-basis: 40%
+        @media($medium)
+            flex-basis: 100%
+    &__img
+        width: 100%
+        height: auto
+    &__content
+        flex-basis: 58% 
+        @media($medium)
+            flex-basis: 100%
+    &__name
+        font-size: 28px
+        padding-bottom: $offset
+    &__price
+        font-size: 28px
+        font-weight: bold
+        padding: $offset/2 0
+    &__text_block
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        padding: $offset/2 0
+    &__text
+        font-size: 14px
+        color: $light_grey
+        width: 48%
+        @media($large)
+            width: 100%
+    &__include
+        font-weight: bold
+        padding: $offset/2 0
+    &__list
+        color: $light_grey
+        padding: $offset/2 0
+    &__buttons_container
+        display: flex
+        justify-content: space-between
+        width: 48%
+        padding: $offset/2 0
+        @media($large)
+            width: 100%
+    &__article
+        color: $light_grey
+        padding: $offset/2 0
+
+
+.buttons_container
+    display: flex
+    justify-content: space-between
+    width: 100%
+    padding: $offset 0
     //</блоки_main>
 //</блоки>
