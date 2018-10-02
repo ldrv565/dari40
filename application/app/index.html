@@ -1,32 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Мультиподарки</title>
 </head>
 
 <body>
     <aside class="aside">
-        1
+        <div class="aside__header">
+            <div class="busket">
+                <a href="#" class="icon">
+                    <img src="/images/icon.png" alt="icon">
+                    <span> Корзина</span>
+                </a>
+            </div>
+            <a class="logo" href="#">
+                <h1 class="logo__title">DARI40</h1>
+                <span class="logo__subtitle">незабываемые подарки</span>
+            </a>
+        </div>
+        <div class="aside__main">
+            <div class="menu">
+                <a class="menu__item" href="#">
+                    Главная
+                </a>
+                <a class="menu__item" href="#">
+                    Мультиподарки
+                </a>
+                <a class="menu__item" href="#">
+                    Игры и квесты
+                </a>
+                <a class="menu__item" href="#">
+                    Ручная работа
+                </a>
+                <a class="menu__item" href="#">
+                    Карты и сертефикаты
+                </a>
+                <a class="menu__item" href="#">
+                    Контакты
+                </a>
+            </div>
+        </div>
+        <div class="aside__footer">
+            <a class="phone" href="tel:+8(953)954-81-61">
+                <img src="/images/icon.png" alt="icon"> 8(953)954-81-61
+            </a>
+            <div class="social">
+                <a href="#">
+                    <img class="social__icon" src="/images/icon.png" alt="icon">
+                </a>
+                <a href="#">
+                    <img class="social__icon" src="/images/icon.png" alt="icon">
+                </a>
+                <a href="#">
+                    <img class="social__icon" src="/images/icon.png" alt="icon">
+                </a>
+            </div>
+        </div>
     </aside>
     <main class="container">
+        <aside class="opener">
+            <div class="opener__icon">
+                <div class="opener__sticks">
+
+                </div>
+            </div>
+        </aside>
         <header class="header">
             <div class="header__title">
-                <span>Мультиподарки</span>
+                <h2>Мультиподарки</h2>
             </div>
             <div class="header__subtitle">
                 <div class="category">
-                    <span class="category__item">Все подарки</span>
-                    <span class="category__item">Для мужчин</span>
-                    <span class="category__item category__item--active">Для женщин</span>
-                    <span class="category__item">Для детей</span>
-                    <span class="category__item">Начальству</span>
-                    <span class="category__item">Родителям</span>
-                    <span class="category__item">Друзьям</span>
+                    <div class="category__item">Все подарки</div>
+                    <div class="category__item">Для мужчин</div>
+                    <div class="category__item category__item--active">Для женщин</div>
+                    <div class="category__item">Для детей</div>
+                    <div class="category__item">Начальству</div>
+                    <div class="category__item">Родителям</div>
+                    <div class="category__item">Друзьям</div>
                 </div>
                 <div class="nav_panel">
                     <span class="nav_panel__sort_label">Сортировка</span>
@@ -35,184 +94,200 @@
                 </div>
             </div>
         </header>
-        <main class="main">
+        <div class="main">
             <div class="card">
                 <div class="image card__image">
-                    <img class="image__img" src="images/man.jpg" alt="man">
+                    <img class="image__img" src="images/man2.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
                 </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image card__image">
                     <img class="image__img" src="images/man.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
                 </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
-                </div>
-            </div>
-            <div class="card">
-                <div class="image card__image">
-                    <img class="image__img" src="images/man.jpg" alt="man">
-                </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image card__image">
                     <img class="image__img" src="images/man.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
                 </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
-                <div class="card__price">
-                    4200 р
+            </div>
+            <div class="card">
+                <div class="image card__image">
+                    <img class="image__img" src="images/man2.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
+                </div>
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image card__image">
                     <img class="image__img" src="images/man.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
                 </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
-                <div class="card__price">
-                    4200 р
+            </div>
+            <div class="card">
+                <div class="image card__image">
+                    <img class="image__img" src="images/man2.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
+                </div>
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image card__image">
                     <img class="image__img" src="images/man.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
                 </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
-                </div>
-            </div>
-            <div class="card">
-                <div class="image card__image">
-                    <img class="image__img" src="images/man.jpg" alt="man">
-                </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image card__image">
                     <img class="image__img" src="images/man.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
                 </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
-                </div>
-            </div>
-            <div class="card">
-                <div class="image card__image">
-                    <img class="image__img" src="images/man.jpg" alt="man">
-                </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image card__image">
                     <img class="image__img" src="images/man.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
                 </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
-                </div>
-            </div>
-            <div class="card">
-                <div class="image card__image">
-                    <img class="image__img" src="images/man.jpg" alt="man">
-                </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image card__image">
                     <img class="image__img" src="images/man.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
                 </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
-                </div>
-            </div>
-            <div class="card">
-                <div class="image card__image">
-                    <img class="image__img" src="images/man.jpg" alt="man">
-                </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image card__image">
                     <img class="image__img" src="images/man.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
                 </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
-                </div>
-            </div>
-            <div class="card">
-                <div class="image card__image">
-                    <img class="image__img" src="images/man.jpg" alt="man">
-                </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image card__image">
                     <img class="image__img" src="images/man.jpg" alt="man">
+                    <div class="card__add_mini_button">
+                        <img src="/images/icon.png" alt="icon">
+                    </div>
                 </div>
-                <div class="card__name">
-                    Мультиподарок "Мега"
-                </div>
-                <div class="card__price">
-                    4200 р
+                <div>
+                    <div class="card__name">
+                        Мультиподарок "Мега"
+                    </div>
+                    <div class="card__price">
+                        4200 р
+                    </div>
                 </div>
             </div>
-        </main>
+        </div>
     </main>
 </body>
 

@@ -5,33 +5,131 @@ $aside_width: 4 * $atom
 $container_width: 20 * $atom
 $offset: $atom * .3
 //</сетка>
-
+//<медиа_запросы>
+$extra_large: "max-width: 1550px"
+$large: "max-width: 1060px"
+$medium: "max-width: 768px"
+$small: "max-width: 480px"
+//</медиа_запросы>
+//<теги>
+body
+    font-family: Courier New, Courier, monospace
+    overflow-x: hidden
+a
+    text-decoration: none
+    color: inherit
+h1, h2, h3
+    margin: 0
+    font-weight: unset
+//</теги>
 //<основные_контейнеры>
 .aside
     position: fixed
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     top: 0
     left: 0 
     height: 100vh
-    min-height: 500px
+    padding: $atom * .5 $offset
+    box-sizing: border-box
     width: $aside_width
     background: black
     color: white
+    @media($large)
+        font-size: 12px
+    @media($medium)
+        left: -150px
+        width: 150px
+        z-index: 1
+        background: rgba(black, .9)        
+    &--opened
+        left: 0
+    &__header
+        text-align: center
+    &__main
+    &__footer
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+.opener
+    position: fixed
+    align-items: center
+    justify-content: center
+    display: none
+    top: $atom * .25
+    left: $atom * .25
+    width: $atom * 2
+    height: $atom * 2
+    z-index: 1
+    cursor: pointer
+    background: pink
+    box-shadow: 0px 0px 6px grey
+    border-radius: 5px
+    @media($medium)
+        display: flex
+    @media($small)
+        width: $atom * 3.5
+        height: $atom * 3.5
+    &--on
+        left: 154px
+    &__icon
+        width: 50px
+        height: 50px
+    &__sticks
+        width: 20px
+        height: 0px
+        margin: auto
+        background: white
+        content: ""
+        padding-top: 3px
+        margin-top: 16px
+        &::before
+            display: block
+            height: 3px
+            margin-top: 4px
+            background: white
+            content: ""
+        &::after
+            display: block
+            height: 3px
+            margin-top: 4px
+            background: white
+            content: ""
+        &--closing
+            background: transparent
+            &::before
+                height: 2px
+                transform: rotate(45deg)
+            &::after
+                margin-top: -2px
+                height: 2px
+                transform: rotate(-45deg)
 
 .container
     position: absolute
     top: $atom
     right: $atom
     width: $container_width
+    @media($medium)
+        width: $container_width + 2.5 * $atom
+    @media($small)
+        width: $container_width + 1 * $atom
 
 .header
     text-transform: uppercase
     &__title
-        font-size: 24px
+        font-weight: bold
+        @media($small)
+            font-size: 13px
     &__subtitle
         display: flex
         justify-content: space-between
-        font-size: 18px       
+        align-items: flex-end
+        font-size: 17px       
         padding: $offset 0
+        @media($extra_large)
+            font-size: 12px
 
 .main
     display: flex
@@ -39,22 +137,73 @@ $offset: $atom * .3
     flex-wrap: wrap
     margin: $offset 0
 //</основные_контейнеры>
-    
+
 //<блоки>
     //<глобальные_блоки>
 .image
     position: relative
     width: 100%
-    height: 100%
     overflow: hidden
     &__img
         position: absolute
         top: 0
         left: 0
         width: 100%
+        vertical-align: bottom 
     //</глобальные_блоки>
+    //<блоки_aside>
+
+.busket
+    padding: 2vh 0
+    cursor: pointer
+    &:hover
+        background: white
+        color: black
+
+.logo
+    display: block
+    &__title
+        font-size: 42px
+        @media($large)
+            font-size: 21px
+    &:hover
+        background: white
+        color: black
+.menu
+    padding-bottom: $atom
+    @media ($medium)
+        padding-bottom: 0
+    &__item
+        display: block
+        padding: 2vh 0
+        &:hover
+            background: white
+            color: black
+.phone
+    cursor: pointer
+    padding: 2vh
+    margin: 0 -2vh
+    letter-spacing: -1.5px
+    @media($large)
+        font-size: 12px
+    &:hover
+        background: white
+        color: black
+.social
+    display: flex
+    justify-content: center
+    width: 100%
+    &__icon
+        padding: 2vh
+        cursor: pointer
+        &:hover
+            background: white
+            color: black
+    //</блоки_aside>
     //<блоки_header>
 .category
+    display: flex
+    flex-wrap: wrap
     &__item
         padding: 5px
         cursor: pointer
@@ -66,10 +215,26 @@ $offset: $atom * .3
             color: white
         
 .nav_panel
+    display: flex
+    flex-wrap: nowrap
+    max-height: min-content
+    text-align: center
+    justify-content: center
+    align-items: center
+    @media ($medium)
+        flex-wrap: wrap
     &__sort_label
         font-weight: bold
+        padding: 0 $offset/2
+        @media ($medium)
+            font-weight: unset
+            flex-basis: 100%
+            text-align: center
     &__sort_item
         cursor: pointer
+        padding: 3px 5px
+        font-size: 18px
+        width: max-content
         &--active
             color: pink
         &:hover
@@ -77,16 +242,41 @@ $offset: $atom * .3
     //</блоки_header>
     //<блоки_main>
 .card
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     width: ($container_width / 4 ) - $offset/4*3
     margin-bottom: $offset
     text-align: center
+    cursor: pointer
+    @media ($large)
+        width: ($container_width / 3 ) - $offset/3*2
+    @media ($medium)
+        width: ($container_width / 2) - $offset/2*1
+        font-size: 12px
     &__image
-        height: $atom * 5.7
+        height: 5.5 * $atom
+        @media ($large)
+            height: 7.5 * $atom
+        @media ($medium)
+            height: 11 * $atom
     &__add_mini_button
+        position: absolute
+        display: none
+        justify-content: center
+        align-items: center
+        left: 0
+        bottom: 0
+        height: 40px
+        width: 40px
+        background: pink
     &__add_icon
     &__name
         padding: $offset*.5
     &__price
         font-weight: bold
+    &:hover
+        .card__add_mini_button
+            display: flex
     //</блоки_main>
 //</блоки>
