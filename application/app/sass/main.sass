@@ -5,12 +5,15 @@ $aside_width: 4 * $atom
 $container_width: 20 * $atom
 $offset: $atom * .3
 //</сетка>
-//<медиа_запросы>
+//<цвета>
+$grey: #131313
+//</цвета>
+//<брейкпоинты>
 $extra_large: "max-width: 1550px"
-$large: "max-width: 1060px"
+$large: "max-width: 1150px"
 $medium: "max-width: 768px"
 $small: "max-width: 480px"
-//</медиа_запросы>
+//</брейкпоинты>
 //<теги>
 body
     font-family: Courier New, Courier, monospace
@@ -34,15 +37,17 @@ h1, h2, h3
     padding: $atom * .5 $offset
     box-sizing: border-box
     width: $aside_width
-    background: black
+    background: $grey
     color: white
+    @media($extra_large)
+        font-size: 13px
     @media($large)
-        font-size: 12px
+        width: $aside_width + 1.5 * $atom
     @media($medium)
         left: -150px
         width: 150px
         z-index: 1
-        background: rgba(black, .9)        
+        background: $grey       
     &--opened
         left: 0
     &__header
@@ -111,6 +116,8 @@ h1, h2, h3
     top: $atom
     right: $atom
     width: $container_width
+    @media($large)
+        width: $container_width - 1.5 * $atom
     @media($medium)
         width: $container_width + 2.5 * $atom
     @media($small)
@@ -125,7 +132,7 @@ h1, h2, h3
     &__subtitle
         display: flex
         justify-content: space-between
-        align-items: flex-end
+        align-items: flex-start
         font-size: 17px       
         padding: $offset 0
         @media($extra_large)
@@ -158,27 +165,29 @@ h1, h2, h3
     cursor: pointer
     &:hover
         background: white
-        color: black
+        color: $grey
 
 .logo
     display: block
     &__title
         font-size: 42px
+        @media($extra_large)
+            font-size: 32px
         @media($large)
-            font-size: 21px
+            font-size: 26px
     &:hover
         background: white
-        color: black
+        color: $grey
 .menu
     padding-bottom: $atom
-    @media ($medium)
+    @media($large)
         padding-bottom: 0
     &__item
         display: block
         padding: 2vh 0
         &:hover
             background: white
-            color: black
+            color: $grey
 .phone
     cursor: pointer
     padding: 2vh
@@ -188,7 +197,7 @@ h1, h2, h3
         font-size: 12px
     &:hover
         background: white
-        color: black
+        color: $grey
 .social
     display: flex
     justify-content: center
@@ -198,7 +207,7 @@ h1, h2, h3
         cursor: pointer
         &:hover
             background: white
-            color: black
+            color: $grey
     //</блоки_aside>
     //<блоки_header>
 .category
@@ -225,7 +234,7 @@ h1, h2, h3
         flex-wrap: wrap
     &__sort_label
         font-weight: bold
-        padding: 0 $offset/2
+        padding: 5px $offset/2
         @media ($medium)
             font-weight: unset
             flex-basis: 100%
@@ -250,14 +259,14 @@ h1, h2, h3
     text-align: center
     cursor: pointer
     @media ($large)
-        width: ($container_width / 3 ) - $offset/3*2
+        width: (($container_width - 1.5*$atom) / 3 ) - $offset/3*2
     @media ($medium)
         width: ($container_width / 2) - $offset/2*1
         font-size: 12px
     &__image
         height: 5.5 * $atom
         @media ($large)
-            height: 7.5 * $atom
+            height: 7 * $atom
         @media ($medium)
             height: 11 * $atom
     &__add_mini_button
