@@ -83,35 +83,45 @@ h2
     &__icon
         width: 50px
         height: 50px
-    &__sticks
-        width: 20px
-        height: 0px
-        margin: auto
+.icon_sticks
+    width: 20px
+    height: 0px
+    margin: auto
+    background: white
+    content: ""
+    padding-top: 3px
+    margin-top: 16px
+    &::before
+        display: block
+        height: 3px
+        margin-top: 4px
         background: white
         content: ""
-        padding-top: 3px
-        margin-top: 16px
+    &::after
+        display: block
+        height: 3px
+        margin-top: 4px
+        background: white
+        content: ""
+    &--closing
+        background: transparent
         &::before
-            display: block
-            height: 3px
-            margin-top: 4px
-            background: white
-            content: ""
+            height: 2px
+            transform: rotate(45deg)
         &::after
-            display: block
-            height: 3px
-            margin-top: 4px
-            background: white
-            content: ""
-        &--closing
-            background: transparent
-            &::before
-                height: 2px
-                transform: rotate(45deg)
-            &::after
-                margin-top: -2px
-                height: 2px
-                transform: rotate(-45deg)
+            margin-top: -2px
+            height: 2px
+            transform: rotate(-45deg)
+    &--modal
+        margin-top: $atom /8
+        margin-right: $atom /8
+        @media($large)
+            margin-top: 5px
+            margin-right: 5px
+        &::before
+            background: black
+        &::after
+            background: black
 
 .container
     position: absolute
@@ -170,8 +180,8 @@ h2
     display: flex
     font-weight: bold
     height: 60px
-    @media($small)
-        height: 40px
+    @media($medium)
+        height: 30px
     &__value
         border-top: 1px solid $light_grey
         border-bottom: 1px solid $light_grey
@@ -180,8 +190,8 @@ h2
         outline: none
         width: 60px
         text-align: center
-        @media($small)
-            width: 40px
+        @media($medium)
+            width: 30px
     &__decrementer, &__incrementer
         display: flex
         justify-content: center
@@ -189,6 +199,8 @@ h2
         border: 1px solid $light_grey
         width: 40px
         cursor: pointer
+        @media($medium)
+            width: 30px
         &:hover
             background: pink
 .button
@@ -200,10 +212,10 @@ h2
     background: pink
     color: white
     cursor: pointer
-    @media($small)
+    @media($medium)
         width: 120px
         font-size: 12px
-        height: 40px
+        height: 30px
     &__add_icon
         padding-right: 10px
         margin-left: -5px
@@ -220,7 +232,7 @@ h2
         font-size: 16px
         font-weight: bold
     //</глобальные_блоки>
-    //<блоки_aside>
+    //<блоки_header>
 .busket
     padding: 2vh 0
     cursor: pointer
@@ -268,8 +280,8 @@ h2
         &:hover
             background: white
             color: $grey
-    //</блоки_aside>
-    //<блоки_header>
+    //</блоки_header>
+    //<блоки_container_header>
 .category
     display: flex
     flex-wrap: wrap
@@ -308,8 +320,8 @@ h2
             color: pink
         &:hover
             color: pink
-    //</блоки_header>
-    //<блоки_main>
+    //</блоки_container_header>
+    //<блоки_container_main>
 .card
     display: flex
     flex-direction: column
@@ -352,15 +364,11 @@ h2
     flex-wrap: wrap
     justify-content: space-between
     width: 100%
-    &__image-wrap
+    &__image_wrap
         flex-basis: 36%
-        @media($medium)
-            flex-basis: 100%
     &__img
         width: 100%
         height: auto
-        @media($medium)
-            width: 36vw
     &__content
         flex-basis: 62% 
         @media($medium)
@@ -386,8 +394,12 @@ h2
         font-size: 14px
         color: $light_grey
         width: 48%
+        &--width
+            width: 90%
         @media($large)
             width: 100%
+        @media($medium)
+            font-size: 12px
     &__include
         font-weight: bold
         padding: $offset/2 0
@@ -403,6 +415,8 @@ h2
         justify-content: space-between
         width: 48%
         padding: $offset/2 0
+        &--width
+            width: 90%
         @media($extra_large)
             width: 100%
     &__article
@@ -413,5 +427,60 @@ h2
     justify-content: space-between
     width: 100%
     padding: $offset 0
-    //</блоки_main>
+.modal
+    position: fixed
+    display: flex
+    justify-content: center
+    align-items: center
+    box-sizing: border-box
+    top: 0
+    right: 0
+    height: 100vh
+    background: rgba($light_grey, .5) 
+    width: $container_width + 2 * $atom
+    margin-right: -17px
+    &--hidden
+        display: none
+    &__product
+        position: relative
+        width: 1000px
+        background: white
+        padding: $atom/2
+        flex-wrap: nowrap
+        margin-right: 17px
+        &__close_icon
+            position: absolute
+            top: 0
+            right: 0
+            width: $atom/2
+            height: $atom/2
+            min-width: 30px
+            min-height: 30px
+            cursor: pointer
+        &__image_wrap
+            flex-basis: 48%
+            @media($large)
+                flex-basis: 20%
+        &__content
+            flex-basis: 48%
+            padding-left: 10px
+            @media($large)
+                flex-basis: 78%
+        &__text
+            @media($large)
+                max-height: 10vh
+                overflow: auto
+        @media($large)
+            width: 700px
+            max-height: 80vh
+            overflow: auto
+        @media($medium)
+            width: 90%
+        @media($small)
+            padding-top: 20px
+    @media($large)
+        width: $container_width + $atom/2
+    @media($medium)
+            width: 100vw
+    //</блоки_container_main>
 //</блоки>

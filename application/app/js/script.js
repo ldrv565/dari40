@@ -1,5 +1,6 @@
 $("document").ready(function() {
 	menuToggle();
+	modalToggle();
 })
 
 function menuToggle() {
@@ -11,13 +12,33 @@ function menuToggle() {
 	let menuOpenedClass = "aside--opened";
 	let menu = $(menuClass);
 
-	let sticksClass = ".opener__sticks";
+	let sticksClass = ".icon_sticks";
 	let sticks = $(sticksClass);
-	let sticksClosingClass = "opener__sticks--closing";
+	let sticksClosingClass = "icon_sticks--closing";
 
 	menuButton.click(function() {
 		menuButton.toggleClass(menuButtonOnClass);
 		menu.toggleClass(menuOpenedClass);
 		sticks.toggleClass(sticksClosingClass);
 	})
+}
+
+function modalToggle() {
+	let cardClass = ".card";
+	let card = $(cardClass);
+
+	let modalClass = ".modal";
+	let modalHiddenClass = "modal--hidden";
+	let modal = $(modalClass);
+
+	card.click(function() {
+		modal.toggleClass(modalHiddenClass);
+	});
+	modal.click(function(e) {
+		console.log();
+		if(e.target.classList[0] == "modal" || e.target.classList[0] == "modal__product__close_icon") {
+			modal.toggleClass(modalHiddenClass);
+		}
+	})
+
 }
