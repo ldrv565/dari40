@@ -349,8 +349,14 @@ h2 {
 }
 
 .busket {
+    display: block;
+    width: 100%;
     padding: 2vh 0;
     cursor: pointer;
+}
+
+.busket__icon {
+    display: inline;
 }
 
 .busket:hover {
