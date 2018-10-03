@@ -14,7 +14,7 @@
 
 <body>
     <!--меню-->
-    <aside class="aside">
+    <header class="aside">
         <div class="aside__header">
             <div class="busket">
                 <a href="#" class="icon">
@@ -65,19 +65,19 @@
                 </a>
             </div>
         </div>
-    </aside>
-    <aside class="opener">
+    </header>
+    <div class="opener">
         <div class="opener__icon">
             <div class="opener__sticks">
 
             </div>
         </div>
-    </aside>
+    </div>
     <!--/меню-->
     <main class="container">
         <header class="header">
             <div class="header__title">
-                <h2>Мультиподарки</h2>
+                <h2>Мультиподарки</h2><img class="header__arrow" src="/images/icon.png" alt="icon"><span class="header__current_page">Мега</span>
             </div>
             <div class="header__subtitle">
                 <div class="category">
@@ -93,20 +93,23 @@
                     <img class="product__img" src="images/man.jpg" alt="man">
                 </div>
                 <div class="product__content">
-                    <div class="product__name">
+                    <h3 class="product__name">
                         Мультиподарок "Мега"
-                    </div>
+                    </h3>
                     <div class="product__price">
                         4200 р
                     </div>
                     <div class="product__text_block">
                         <div class="product__text">
                             Рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба
-                            текст поможет рыба текст поможет рыба текст поможет рыба текст поможет.
+                            текст поможет рыба текст поможет рыба текст поможет рыба текст поможет. Рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет
+                            рыба.
+
                         </div>
                         <div class="product__text">
                             Рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба
-                            текст поможет рыба текст поможет рыба текст поможет рыба текст поможет.
+                            текст поможет рыба текст поможет рыба текст поможет рыба текст поможет. Рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет рыба текст поможет
+                            рыба.
                         </div>
                     </div>
                     <div class="product__include">
@@ -127,25 +130,31 @@
                         </div>
                     </div>
                     <div class="product__buttons_container">
-                        <div class="counter counter--big">
-                            1
+                        <div class="counter">
+                            <div class="counter__decrementer">
+                                -
+                            </div>
+                            <input class="counter__value" value="1">
+                            <div class="counter__incrementer">
+                                +
+                            </div>
                         </div>
                         <div class="button">
                             <img class="button__add_icon" src="/images/icon.png" alt="icon"> В КОРЗИНУ
                         </div>
                     </div>
                     <div class="product__article">
-                        Артикуль 0123456789
+                        Артикул: 0123456789
                     </div>
                 </div>
             </div>
             <div class="buttons_container">
-                <div class="button button--previous">
-                    <span class="button__arrow"><</span> ВЕРНУТЬСЯ
-                </div>
-                <div class="button button--forward">
-                    СЛЕДУЮЩИЙ <span class="button__arrow">></span>
-                </div>
+                <a class="button button--previous" href="#">
+                    <span class="button__arrow">&lt;</span> ВЕРНУТЬСЯ
+                </a>
+                <a class="button button--forward" href="#">
+                    СЛЕДУЮЩИЙ <span class="button__arrow"> ></span>
+                </a>
             </div>
         </div>
     </main>

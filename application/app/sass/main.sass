@@ -7,7 +7,7 @@ $offset: $atom * .3
 //</сетка>
 //<цвета>
 $grey: #131313
-$light_grey: #464646
+$light_grey: #8a8a8a
 //</цвета>
 //<брейкпоинты>
 $extra_large: "max-width: 1550px"
@@ -18,13 +18,14 @@ $small: "max-width: 480px"
 //<теги>
 body
     font-family: Courier New, Courier, monospace
-    overflow-x: hidden
 a
     text-decoration: none
     color: inherit
 h1, h2, h3
     margin: 0
     font-weight: unset
+h2
+    display: inline
 //</теги>
 //<основные_контейнеры>
 .aside
@@ -127,9 +128,15 @@ h1, h2, h3
 .header
     text-transform: uppercase
     &__title
+        display: flex
+        align-items: center
         font-weight: bold
         @media($small)
             font-size: 13px
+    &__arrow
+        padding: 0 $offset
+    &__current_page
+        color: $light_grey
     &__subtitle
         display: flex
         justify-content: space-between
@@ -158,17 +165,68 @@ h1, h2, h3
         top: 0
         left: 0
         width: 100%
-        vertical-align: bottom 
+        vertical-align: bottom
+.counter
+    display: flex
+    font-weight: bold
+    height: 60px
+    @media($small)
+        height: 40px
+    &__value
+        border-top: 1px solid $light_grey
+        border-bottom: 1px solid $light_grey
+        border-left: 0
+        border-right: 0
+        outline: none
+        width: 60px
+        text-align: center
+        @media($small)
+            width: 40px
+    &__decrementer, &__incrementer
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 1px solid $light_grey
+        width: 40px
+        cursor: pointer
+        &:hover
+            background: pink
+.button
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 60px
+    width: 200px
+    background: pink
+    color: white
+    cursor: pointer
+    @media($small)
+        width: 120px
+        font-size: 12px
+        height: 40px
+    &__add_icon
+        padding-right: 10px
+        margin-left: -5px
+    &--previous, &--forward
+        width: auto
+        height: auto
+        background: none
+        color: pink
+        font-size: 21px
+        @media($small)
+            font-size: 12px
+    &__arrow
+        padding: 10px
+        font-size: 16px
+        font-weight: bold
     //</глобальные_блоки>
     //<блоки_aside>
-
 .busket
     padding: 2vh 0
     cursor: pointer
     &:hover
         background: white
         color: $grey
-
 .logo
     display: block
     &__title
@@ -225,7 +283,6 @@ h1, h2, h3
         &:hover
             background: pink
             color: white
-        
 .nav_panel
     display: flex
     flex-wrap: nowrap
@@ -290,30 +347,36 @@ h1, h2, h3
     &:hover
         .card__add_mini_button
             display: flex
-
 .product
     display: flex
     flex-wrap: wrap
     justify-content: space-between
     width: 100%
     &__image-wrap
-        flex-basis: 40%
+        flex-basis: 36%
         @media($medium)
             flex-basis: 100%
     &__img
         width: 100%
         height: auto
+        @media($medium)
+            width: 36vw
     &__content
-        flex-basis: 58% 
+        flex-basis: 62% 
         @media($medium)
             flex-basis: 100%
     &__name
         font-size: 28px
-        padding-bottom: $offset
+        padding-bottom: $offset/2
+        border-bottom: 1px solid $light_grey
+        @media($medium)
+            font-size: 18px
     &__price
         font-size: 28px
         font-weight: bold
         padding: $offset/2 0
+        @media($medium)
+            font-size: 18px
     &__text_block
         display: flex
         flex-wrap: wrap
@@ -328,21 +391,23 @@ h1, h2, h3
     &__include
         font-weight: bold
         padding: $offset/2 0
+        @media($medium)
+            font-size: 12px
     &__list
         color: $light_grey
         padding: $offset/2 0
+    &__list_item
+        padding: $offset/4 0
     &__buttons_container
         display: flex
         justify-content: space-between
         width: 48%
         padding: $offset/2 0
-        @media($large)
+        @media($extra_large)
             width: 100%
     &__article
         color: $light_grey
         padding: $offset/2 0
-
-
 .buttons_container
     display: flex
     justify-content: space-between
