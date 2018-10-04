@@ -165,11 +165,13 @@ h2 {
   .header__subtitle {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    font-size: 21px;
-    padding-bottom: 1.15385vw;
     font-family: bebasneuebook;
-    letter-spacing: .025em; }
+    font-size: 21px;
+    padding-bottom: 1.15385vw; }
+    @media (max-width: 1150px) {
+      .header__subtitle {
+        font-size: 18px;
+        letter-spacing: .05em; } }
     @media (max-width: 480px) {
       .header__subtitle {
         font-size: 14px; } }

@@ -169,11 +169,12 @@ h2
     &__subtitle
         display: flex
         justify-content: space-between
-        align-items: flex-start
+        font-family: bebasneuebook
         font-size: 21px       
         padding-bottom: $offset
-        font-family: bebasneuebook
-        letter-spacing: .025em
+        @media($large)
+            font-size: 18px
+            letter-spacing: .05em
         @media($small)
             font-size: 14px
 
