@@ -1,3 +1,17 @@
+//<шрифты>
+@mixin addFont ($fontName)
+    font-family: $fontName
+    src: url('../fonts/'+$fontName+'.eot')
+    src: url('../fonts/'+$fontName+'.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/'+$fontName+'.woff') format('woff'),
+    url('../fonts/'+$fontName+'.ttf') format('truetype')
+@font-face 
+    @include addFont(bebasneuebook)
+@font-face 
+    @include addFont(bebasneueregular)
+@font-face 
+    @include addFont(gothamprolighter)    
+//</шрифты>
 //<сетка>
 $columns: 26
 $atom: 100vw / 26
@@ -17,13 +31,14 @@ $small: "max-width: 480px"
 //</брейкпоинты>
 //<теги>
 body
-    font-family: Courier New, Courier, monospace
+    font-family: gothamprolighter   
 a
     text-decoration: none
     color: inherit
 h1, h2, h3
     margin: 0
-    font-weight: unset
+    font-size: inherit
+    font-weight: normal
 h2
     display: inline
 //</теги>
@@ -136,26 +151,31 @@ h2
         width: $container_width + 1 * $atom
 
 .header
-    text-transform: uppercase
+    font-family: bebasneueregular
     &__title
         display: flex
         align-items: center
         font-weight: bold
         padding-bottom: $offset
+        font-size: 28px
         @media($small)
-            font-size: 13px
+            font-size: 16px
     &__arrow
         padding: 0 $offset
     &__current_page
         color: $light_grey
+        font-weight: lighter
+        font-size: .7em
     &__subtitle
         display: flex
         justify-content: space-between
         align-items: flex-start
-        font-size: 17px       
+        font-size: 21px       
         padding-bottom: $offset
-        @media($extra_large)
-            font-size: 12px
+        font-family: bebasneuebook
+        letter-spacing: .025em
+        @media($small)
+            font-size: 14px
 
 .main
     display: flex
@@ -269,7 +289,6 @@ h2
     cursor: pointer
     padding: 2vh
     margin: 0 -2vh
-    letter-spacing: -1.5px
     @media($large)
         font-size: 12px
     &:hover
@@ -289,6 +308,7 @@ h2
     //<блоки_container_header>
 .category
     display: flex
+    justify-content: space-around
     flex-wrap: wrap
     &__item
         padding: 5px
@@ -313,7 +333,6 @@ h2
         font-weight: bold
         padding: 5px $offset/2
         @media ($medium)
-            font-weight: unset
             flex-basis: 100%
             text-align: center
     &__sort_item
@@ -338,14 +357,18 @@ h2
     @media ($large)
         width: (($container_width - 1.5*$atom) / 3 ) - $offset/3*2
     @media ($medium)
-        width: ($container_width / 2) - $offset/2*1
+        width: ($container_width + 2.5 * $atom)/3 - $offset/3*2
         font-size: 12px
+    @media ($small)
+        width: ($container_width / 2) - $offset/2*1
     &__image
         height: 5.5 * $atom
         @media ($large)
             height: 7 * $atom
         @media ($medium)
-            height: 11 * $atom
+            height: 8.5 * $atom
+        @media ($small)
+            height: 11.5 * $atom
     &__add_mini_button
         position: absolute
         display: none
@@ -384,12 +407,16 @@ h2
         border-bottom: 1px solid $light_grey
         @media($medium)
             font-size: 18px
+        @media($small)
+            font-size: 14px
     &__price
         font-size: 28px
         font-weight: bold
         padding: $offset/2 0
         @media($medium)
             font-size: 18px
+        @media($small)
+            font-size: 14px
     &__text_block
         display: flex
         flex-wrap: wrap
@@ -427,6 +454,7 @@ h2
     &__article
         color: $light_grey
         padding: $offset/2 0
+        font-size: 14px
 .buttons_container
     display: flex
     justify-content: space-between
@@ -481,11 +509,13 @@ h2
             overflow: auto
         @media($medium)
             width: 90%
+            margin-right: 0
         @media($small)
             padding-top: 20px
     @media($large)
         width: $container_width + $atom/2
     @media($medium)
-            width: 100vw
+        width: 100vw
+        margin-right: 0
     //</блоки_container_main>
 //</блоки>

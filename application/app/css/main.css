@@ -1,5 +1,20 @@
+@font-face {
+  font-family: bebasneuebook;
+  src: url("../fonts/bebasneuebook.eot");
+  src: url("../fonts/bebasneuebook.eot?#iefix") format("embedded-opentype"), url("../fonts/bebasneuebook.woff") format("woff"), url("../fonts/bebasneuebook.ttf") format("truetype"); }
+
+@font-face {
+  font-family: bebasneueregular;
+  src: url("../fonts/bebasneueregular.eot");
+  src: url("../fonts/bebasneueregular.eot?#iefix") format("embedded-opentype"), url("../fonts/bebasneueregular.woff") format("woff"), url("../fonts/bebasneueregular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: gothamprolighter;
+  src: url("../fonts/gothamprolighter.eot");
+  src: url("../fonts/gothamprolighter.eot?#iefix") format("embedded-opentype"), url("../fonts/gothamprolighter.woff") format("woff"), url("../fonts/gothamprolighter.ttf") format("truetype"); }
+
 body {
-  font-family: Courier New, Courier, monospace; }
+  font-family: gothamprolighter; }
 
 a {
   text-decoration: none;
@@ -7,7 +22,8 @@ a {
 
 h1, h2, h3 {
   margin: 0;
-  font-weight: unset; }
+  font-size: inherit;
+  font-weight: normal; }
 
 h2 {
   display: inline; }
@@ -130,28 +146,33 @@ h2 {
       width: 80.76923vw; } }
 
 .header {
-  text-transform: uppercase; }
+  font-family: bebasneueregular; }
   .header__title {
     display: flex;
     align-items: center;
     font-weight: bold;
-    padding-bottom: 1.15385vw; }
+    padding-bottom: 1.15385vw;
+    font-size: 28px; }
     @media (max-width: 480px) {
       .header__title {
-        font-size: 13px; } }
+        font-size: 16px; } }
   .header__arrow {
     padding: 0 1.15385vw; }
   .header__current_page {
-    color: #8a8a8a; }
+    color: #8a8a8a;
+    font-weight: lighter;
+    font-size: .7em; }
   .header__subtitle {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    font-size: 17px;
-    padding-bottom: 1.15385vw; }
-    @media (max-width: 1550px) {
+    font-size: 21px;
+    padding-bottom: 1.15385vw;
+    font-family: bebasneuebook;
+    letter-spacing: .025em; }
+    @media (max-width: 480px) {
       .header__subtitle {
-        font-size: 12px; } }
+        font-size: 14px; } }
 
 .main {
   display: flex;
@@ -273,8 +294,7 @@ h2 {
 .phone {
   cursor: pointer;
   padding: 2vh;
-  margin: 0 -2vh;
-  letter-spacing: -1.5px; }
+  margin: 0 -2vh; }
   @media (max-width: 1150px) {
     .phone {
       font-size: 12px; } }
@@ -295,6 +315,7 @@ h2 {
 
 .category {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap; }
   .category__item {
     padding: 5px;
@@ -322,7 +343,6 @@ h2 {
     padding: 5px 0.57692vw; }
     @media (max-width: 768px) {
       .nav_panel__sort_label {
-        font-weight: unset;
         flex-basis: 100%;
         text-align: center; } }
   .nav_panel__sort_item {
@@ -348,8 +368,11 @@ h2 {
       width: 22.94872vw; } }
   @media (max-width: 768px) {
     .card {
-      width: 37.88462vw;
+      width: 28.07692vw;
       font-size: 12px; } }
+  @media (max-width: 480px) {
+    .card {
+      width: 37.88462vw; } }
   .card__image {
     height: 21.15385vw; }
     @media (max-width: 1150px) {
@@ -357,7 +380,10 @@ h2 {
         height: 26.92308vw; } }
     @media (max-width: 768px) {
       .card__image {
-        height: 42.30769vw; } }
+        height: 32.69231vw; } }
+    @media (max-width: 480px) {
+      .card__image {
+        height: 44.23077vw; } }
   .card__add_mini_button {
     position: absolute;
     display: none;
@@ -397,6 +423,9 @@ h2 {
     @media (max-width: 768px) {
       .product__name {
         font-size: 18px; } }
+    @media (max-width: 480px) {
+      .product__name {
+        font-size: 14px; } }
   .product__price {
     font-size: 28px;
     font-weight: bold;
@@ -404,6 +433,9 @@ h2 {
     @media (max-width: 768px) {
       .product__price {
         font-size: 18px; } }
+    @media (max-width: 480px) {
+      .product__price {
+        font-size: 14px; } }
   .product__text_block {
     display: flex;
     flex-wrap: wrap;
@@ -444,7 +476,8 @@ h2 {
         width: 100%; } }
   .product__article {
     color: #8a8a8a;
-    padding: 0.57692vw 0; }
+    padding: 0.57692vw 0;
+    font-size: 14px; }
 
 .buttons_container {
   display: flex;
@@ -504,7 +537,8 @@ h2 {
         overflow: auto; } }
     @media (max-width: 768px) {
       .modal__product {
-        width: 90%; } }
+        width: 90%;
+        margin-right: 0; } }
     @media (max-width: 480px) {
       .modal__product {
         padding-top: 20px; } }
@@ -513,4 +547,5 @@ h2 {
       width: 78.84615vw; } }
   @media (max-width: 768px) {
     .modal {
-      width: 100vw; } }
+      width: 100vw;
+      margin-right: 0; } }
