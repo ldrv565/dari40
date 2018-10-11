@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/gift.png" type="image/x-icon">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Оплата</title>
+    <style>
+        .c,
+        .hc:hover {
+            color: rgb(132, 123, 186);
+        }
+        
+        .bgc,
+        .bghc:hover {
+            background-color: rgb(132, 123, 186);
+        }
+        
+        .bdc,
+        .bdhc:hover {
+            border-color: rgb(132, 123, 186);
+        }
+    </style>
+</head>
+
+<body>
+    <!--меню-->
+    <header class="aside">
+        <div class="aside__header">
+            <a class="busket" href="busket.html">
+                <div class="busket__icon">
+                    <img src="img/icon.png" alt="icon">
+                </div>
+                <span> Корзина</span>
+            </a>
+            <a class="logo" href="#">
+                <h1 class="logo__title">DARI40</h1>
+                <span class="logo__subtitle">незабываемые подарки</span>
+            </a>
+        </div>
+        <div class="aside__main">
+            <div class="menu">
+                <a class="menu__item" href="#">
+                    Главная
+                </a>
+                <a class="menu__item" href="catalog.html">
+                    Мультиподарки
+                </a>
+                <a class="menu__item" href="#">
+                    Игры и квесты
+                </a>
+                <a class="menu__item" href="#">
+                    Ручная работа
+                </a>
+                <a class="menu__item" href="#">
+                    Карты и сертефикаты
+                </a>
+                <a class="menu__item" href="#">
+                    Контакты
+                </a>
+            </div>
+        </div>
+        <div class="aside__footer">
+            <a class="phone" href="tel:+8(953)954-81-61">
+                <img class="phone__icon" src="img/phone.png" alt="icon"> <span>8 (953) 954-81-61</span>
+            </a>
+            <div class="social">
+                <a class="social__item" href="#">
+                    <img class="social__item__icon" src="img/vk.png" alt="icon">
+                </a>
+                <a class="social__item" href="#">
+                    <img class="social__item__icon" src="img/ok.png" alt="icon">
+                </a>
+                <a class="social__item" href="#">
+                    <img class="social__item__icon" src="img/mail.png" alt="icon">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="opener bgc">
+        <div class="opener__icon">
+            <div class="icon_sticks">
+
+            </div>
+        </div>
+    </div>
+    <!--/меню-->
+    <main class="container">
+        <header class="header">
+            <div class="header__title">
+                <h2>Контакты</h2>
+            </div>
+        </header>
+        <div class="main">
+            <div class="payment_table">
+                <div class="payment_table__cell">
+                    <div class="payment_table__cell_name">
+                        <span>Имя</span><span class="payment_table__cell_name_important"> *</span>
+                    </div>
+                    <input class="payment_table__cell_value" type="text" value="Сергей">
+                </div>
+                <div class="payment_table__cell">
+                    <div class="payment_table__cell_name">
+                        <span>Фамилия</span><span class="payment_table__cell_name_important"> *</span>
+                    </div>
+                    <input class="payment_table__cell_value" type="text" value="Ванеев">
+                </div>
+                <div class="payment_table__cell">
+                    <div class="payment_table__cell_name">
+                        <span>Страна</span><span class="payment_table__cell_name_important"> *</span>
+                    </div>
+                    <input class="payment_table__cell_value" type="text" value="Россия">
+                </div>
+                <div class="payment_table__cell">
+                    <div class="payment_table__cell_name">
+                        <span>E-mail</span><span class="payment_table__cell_name_important"> *</span>
+                    </div>
+                    <input class="payment_table__cell_value" type="text" value="example@gmail.com">
+                </div>
+                <div class="payment_table__cell">
+                    <div class="payment_table__cell_name">
+                        <span>Город</span><span class="payment_table__cell_name_important"> *</span>
+                    </div>
+                    <input class="payment_table__cell_value" type="text" value="Калуга">
+                </div>
+                <div class="payment_table__cell">
+                    <div class="payment_table__cell_name">
+                        <span>Адрес</span><span class="payment_table__cell_name_important"> *</span>
+                    </div>
+                    <input class="payment_table__cell_value" type="text" value="Труда 30а">
+                </div>
+                <div class="payment_table__cell">
+                    <div class="payment_table__cell_name">
+                        <span>Телефон</span><span class="payment_table__cell_name_important"> *</span>
+                    </div>
+                    <input class="payment_table__cell_value" type="text" value="8 800 300 30 30">
+                </div>
+                <div class="payment_table__cell">
+                    <div class="payment_table__cell_name">
+                        <span>Дополнительная информация</span>
+                    </div>
+                    <input class="payment_table__cell_value" type="text" value="я хочу быстрее">
+                </div>
+            </div>
+            <header class="header">
+                <div class="header__title">
+                    <span>Способ оплаты</span>
+                </div>
+            </header>
+            <div class="payment_choice">
+                <input name="payment" type="radio" value="non-cash" checked>
+                <span class="payment_choice__text">Оплата картой</span>
+            </div>
+            <div class="payment_choice">
+                <input name="payment" type="radio" value="cash">
+                <span class="payment_choice__text">Оплата при получении</span>
+            </div>
+            <div class="payment_choice">
+                <span class="payment_choice__text">Не забудьте заполнить поля со звездочкой<span class="payment_choice__important"> *</span></span>
+            </div>
+            <div class="buttons_container">
+                <a class="button hc bgc bdc" href="#">
+                    ОПЛАТИТЬ
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

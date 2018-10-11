@@ -31,7 +31,7 @@ h2,
 h3 {
   margin: 0;
   font-size: inherit;
-  font-weight: normal;
+  font-weight: unset;
 }
 
 h2 {
@@ -40,6 +40,7 @@ h2 {
 
 input {
   font-size: inherit;
+  outline: none;
 }
 
 .aside {
@@ -159,12 +160,12 @@ input {
 
 .header {
   font-family: bebasneueregular;
+  flex-basis: 100%;
 }
 
 .header__title {
   display: flex;
   align-items: center;
-  font-weight: bold;
   padding-bottom: 1.15385vw;
   font-size: 28px;
 }
@@ -683,6 +684,50 @@ input {
 
 .table__total_price {
   white-space: nowrap;
+}
+
+.payment_table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 800px;
+  margin-bottom: 2.30769vw;
+}
+
+.payment_table__cell {
+  flex-basis: 48%;
+}
+
+.payment_table__cell_name {
+  font-weight: bold;
+  margin: 25px 0;
+}
+
+.payment_table__cell_name_important {
+  color: red;
+}
+
+.payment_table__cell_value {
+  border: unset;
+  border-bottom: 1px solid #ababab;
+  width: 100%;
+  color: #ababab;
+  padding-bottom: 0.57692vw;
+}
+
+.payment_choice {
+  flex-basis: 100%;
+  padding-bottom: 25px;
+}
+
+.payment_choice__text {
+  color: #5f5f5f;
+}
+
+.payment_choice__important {
+  color: red;
+  font-weight: bold;
 }
 
 @media (max-width: 1550px) {

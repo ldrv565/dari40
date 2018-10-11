@@ -39,11 +39,12 @@ a
 h1, h2, h3
     margin: 0
     font-size: inherit
-    font-weight: normal
+    font-weight: unset
 h2
     display: inline
 input
     font-size: inherit
+    outline: none
 //</теги>
 //<основные_контейнеры>
 .aside
@@ -157,10 +158,10 @@ input
 
 .header
     font-family: bebasneueregular
+    flex-basis: 100%
     &__title
         display: flex
         align-items: center
-        font-weight: bold
         padding-bottom: $offset
         font-size: 28px
         @media($small)
@@ -510,7 +511,6 @@ input
         @media($small)
             min-width: 100vw
             margin-left: -4*$atom
-
 .modal
     position: fixed
     display: flex
@@ -630,5 +630,33 @@ input
             max-height: 30px
     &__total_price
         white-space: nowrap
+.payment_table
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-end
+    width: 800px
+    margin-bottom: 2*$offset
+    &__cell
+        flex-basis: 48%
+        &_name
+            font-weight: bold
+            margin: 25px 0
+            &_important
+                color: red
+        &_value
+            border: unset
+            border-bottom: 1px solid $light_grey
+            width: 100%
+            color: $light_grey
+            padding-bottom: $offset/2
+.payment_choice
+    flex-basis: 100%
+    padding-bottom: 25px
+    &__text
+        color: $grey * 5
+    &__important
+        color: red
+        font-weight: bold
     //</блоки_container_main>
 //</блоки>
