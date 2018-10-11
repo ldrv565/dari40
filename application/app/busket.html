@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Корзина</title>
+</head>
+
+<body>
+    <!--меню-->
+    <header class="aside">
+        <div class="aside__header">
+            <a class="busket" href="busket.html">
+                <div class="busket__icon">
+                    <img src="/images/icon.png" alt="icon">
+                </div>
+                <span> Корзина</span>
+            </a>
+            <a class="logo" href="#">
+                <h1 class="logo__title">DARI40</h1>
+                <span class="logo__subtitle">незабываемые подарки</span>
+            </a>
+        </div>
+        <div class="aside__main">
+            <div class="menu">
+                <a class="menu__item" href="#">
+                    Главная
+                </a>
+                <a class="menu__item" href="catalog.html">
+                    Мультиподарки
+                </a>
+                <a class="menu__item" href="#">
+                    Игры и квесты
+                </a>
+                <a class="menu__item" href="#">
+                    Ручная работа
+                </a>
+                <a class="menu__item" href="#">
+                    Карты и сертефикаты
+                </a>
+                <a class="menu__item" href="#">
+                    Контакты
+                </a>
+            </div>
+        </div>
+        <div class="aside__footer">
+            <a class="phone" href="tel:+8(953)954-81-61">
+                <img class="phone__icon" src="/images/icon.png" alt="icon"> <span>8 (953) 954-81-61</span>
+            </a>
+            <div class="social">
+                <a class="social__item" href="#">
+                    <img class="social__item__icon" src="/images/icon.png" alt="icon">
+                </a>
+                <a class="social__item" href="#">
+                    <img class="social__item__icon" src="/images/icon.png" alt="icon">
+                </a>
+                <a class="social__item" href="#">
+                    <img class="social__item__icon" src="/images/icon.png" alt="icon">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="opener">
+        <div class="opener__icon">
+            <div class="icon_sticks">
+
+            </div>
+        </div>
+    </div>
+    <!--/меню-->
+    <main class="container">
+        <header class="header">
+            <div class="header__title">
+                <h2>Корзина</h2>
+            </div>
+        </header>
+        <div class="main">
+            <div class="table">
+                <div class="table__row table__row--head">
+                    <div class="table__half table__half--name">
+                        <div class="table__item">
+                            <span>Название</span>
+                        </div>
+                    </div>
+                    <div class="table__half">
+                        <div class="table__item">
+                            <span>Цена за единицу</span>
+                        </div>
+                        <div class="table__item">
+                            <span>Количество</span>
+                        </div>
+                        <div class="table__item">
+                            <span>Общая цена</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__half table__half--name">
+                        <div class="table__icon">
+                            <div class="icon_sticks icon_sticks--closing icon_sticks--black icon_sticks--table">
+                            </div>
+                        </div>
+                        <div class="table__item table__item--image">
+                            <div class="image table__image">
+                                <img class="image__img" src="/images/man.jpg" alt="man">
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__name">
+                                <span>Мультиподарок Мульти подарок "Мега"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__half">
+                        <div class="table__item">
+                            <div class="table__price">
+                                <span>111 450 р</span>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="counter counter--small table__counter">
+                                <div class="counter__decrementer">
+                                    -
+                                </div>
+                                <input class="counter__value" type="text" value="1">
+                                <div class="counter__incrementer">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__total_price">
+                                111 450 р
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__half table__half--name">
+                        <div class="table__icon">
+                            <div class="icon_sticks icon_sticks--closing icon_sticks--black icon_sticks--table">
+                            </div>
+                        </div>
+                        <div class="table__item table__item--image">
+                            <div class="image table__image">
+                                <img class="image__img" src="/images/man.jpg" alt="man">
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__name">
+                                <span>Мультиподарок Мульти подарок "Мега"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__half">
+                        <div class="table__item">
+                            <div class="table__price">
+                                <span>1 400 р</span>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="counter counter--small table__counter">
+                                <div class="counter__decrementer">
+                                    -
+                                </div>
+                                <input class="counter__value" type="text" value="1">
+                                <div class="counter__incrementer">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__total_price">
+                                1 400 р
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__half table__half--name">
+                        <div class="table__icon">
+                            <div class="icon_sticks icon_sticks--closing icon_sticks--black icon_sticks--table">
+                            </div>
+                        </div>
+                        <div class="table__item table__item--image">
+                            <div class="image table__image">
+                                <img class="image__img" src="/images/man.jpg" alt="man">
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__name">
+                                <span>Мультиподарок Мульти подарок "Мега"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__half">
+                        <div class="table__item">
+                            <div class="table__price">
+                                <span>1 400 р</span>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="counter counter--small table__counter">
+                                <div class="counter__decrementer">
+                                    -
+                                </div>
+                                <input class="counter__value" type="text" value="1">
+                                <div class="counter__incrementer">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__total_price">
+                                1 400 р
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__half table__half--name">
+                        <div class="table__icon">
+                            <div class="icon_sticks icon_sticks--closing icon_sticks--black icon_sticks--table">
+                            </div>
+                        </div>
+                        <div class="table__item table__item--image">
+                            <div class="image table__image">
+                                <img class="image__img" src="/images/man.jpg" alt="man">
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__name">
+                                <span>Мультиподарок Мульти подарок "Мега"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__half">
+                        <div class="table__item">
+                            <div class="table__price">
+                                <span>1 400 р</span>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="counter counter--small table__counter">
+                                <div class="counter__decrementer">
+                                    -
+                                </div>
+                                <input class="counter__value" type="text" value="1">
+                                <div class="counter__incrementer">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__total_price">
+                                1 400 р
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__half table__half--name">
+                        <div class="table__icon">
+                            <div class="icon_sticks icon_sticks--closing icon_sticks--black icon_sticks--table">
+                            </div>
+                        </div>
+                        <div class="table__item table__item--image">
+                            <div class="image table__image">
+                                <img class="image__img" src="/images/man.jpg" alt="man">
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__name">
+                                <span>Мультиподарок Мульти подарок "Мега"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__half">
+                        <div class="table__item">
+                            <div class="table__price">
+                                <span>1 400 р</span>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="counter counter--small table__counter">
+                                <div class="counter__decrementer">
+                                    -
+                                </div>
+                                <input class="counter__value" type="text" value="1">
+                                <div class="counter__incrementer">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__total_price">
+                                1 400 р
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__half table__half--name">
+                        <div class="table__icon">
+                            <div class="icon_sticks icon_sticks--closing icon_sticks--black icon_sticks--table">
+                            </div>
+                        </div>
+                        <div class="table__item table__item--image">
+                            <div class="image table__image">
+                                <img class="image__img" src="/images/man.jpg" alt="man">
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__name">
+                                <span>Мультиподарок Мульти подарок "Мега"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__half">
+                        <div class="table__item">
+                            <div class="table__price">
+                                <span>1 400 р</span>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="counter counter--small table__counter">
+                                <div class="counter__decrementer">
+                                    -
+                                </div>
+                                <input class="counter__value" type="text" value="1">
+                                <div class="counter__incrementer">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__total_price">
+                                1 400 р
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__half table__half--name">
+                        <div class="table__icon">
+                            <div class="icon_sticks icon_sticks--closing icon_sticks--black icon_sticks--table">
+                            </div>
+                        </div>
+                        <div class="table__item table__item--image">
+                            <div class="image table__image">
+                                <img class="image__img" src="/images/man.jpg" alt="man">
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__name">
+                                <span>Мультиподарок Мульти подарок "Мега"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__half">
+                        <div class="table__item">
+                            <div class="table__price">
+                                <span>1 400 р</span>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="counter counter--small table__counter">
+                                <div class="counter__decrementer">
+                                    -
+                                </div>
+                                <input class="counter__value" type="text" value="1">
+                                <div class="counter__incrementer">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__total_price">
+                                1 400 р
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__half table__half--name">
+                        <div class="table__icon">
+                            <div class="icon_sticks icon_sticks--closing icon_sticks--black icon_sticks--table">
+                            </div>
+                        </div>
+                        <div class="table__item table__item--image">
+                            <div class="image table__image">
+                                <img class="image__img" src="/images/man.jpg" alt="man">
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__name">
+                                <span>Мультиподарок Мульти подарок "Мега"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__half">
+                        <div class="table__item">
+                            <div class="table__price">
+                                <span>1 400 р</span>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="counter counter--small table__counter">
+                                <div class="counter__decrementer">
+                                    -
+                                </div>
+                                <input class="counter__value" type="text" value="1">
+                                <div class="counter__incrementer">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__total_price">
+                                1 400 р
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__half table__half--name">
+                        <div class="table__icon">
+                            <div class="icon_sticks icon_sticks--closing icon_sticks--black icon_sticks--table">
+                            </div>
+                        </div>
+                        <div class="table__item table__item--image">
+                            <div class="image table__image">
+                                <img class="image__img" src="/images/man.jpg" alt="man">
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__name">
+                                <span>Ультрамультиподарок Мульти подарок "Мега"</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__half">
+                        <div class="table__item">
+                            <div class="table__price">
+                                <span>1 400 р</span>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="counter counter--small table__counter">
+                                <div class="counter__decrementer">
+                                    -
+                                </div>
+                                <input class="counter__value" type="text" value="1">
+                                <div class="counter__incrementer">
+                                    +
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__item">
+                            <div class="table__total_price">
+                                1 400 р
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons_container">
+                <a class="button button--previous" href="#">
+                    <span class="button__arrow">&lt;</span> ВЕРНУТЬСЯ
+                </a>
+                <a class="button button--forward" href="#">
+                    СЛЕДУЮЩИЙ <span class="button__arrow"> ></span>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

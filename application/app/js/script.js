@@ -24,18 +24,20 @@ function menuToggle() {
 }
 
 function modalToggle() {
-	let cardClass = ".card";
-	let card = $(cardClass);
+	let miniButtonClass = ".card__add_mini_button";
+	let miniButton = $(miniButtonClass);
 
 	let modalClass = ".modal";
 	let modalHiddenClass = "modal--hidden";
 	let modal = $(modalClass);
 
-	card.click(function() {
+	miniButton.click(function(e) {
+		e.preventDefault();
 		modal.toggleClass(modalHiddenClass);
 	});
 	modal.click(function(e) {
-		if(e.target.classList[0] == "modal" || e.target.classList[0] == "modal__product__close_icon" || e.target.classList[2] == "icon_sticks--modal") {
+		console.log(e.target.classList);
+		if(e.target.classList[0] == "modal" || e.target.classList[0] == "modal__product__close_icon" || e.target.classList[3] == "icon_sticks--modal") {
 			modal.toggleClass(modalHiddenClass);
 		}
 	})
