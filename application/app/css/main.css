@@ -275,15 +275,34 @@ input {
 }
 
 .button__arrow {
-  padding: 10px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: .5em;
+  font-size: .6em;
+}
+
+.button__arrow--previous {
+  transform: rotate(45deg);
+}
+
+.button__arrow--forward {
+  transform: rotate(-135deg);
 }
 
 .button--previous,
 .button--forward {
+  font-family: bebasneuebook;
+  font-size: 1.5em;
   width: auto;
   height: auto;
+}
+
+.button--promo {
+  font-size: 1.5em;
+  justify-content: flex-start;
+  font-family: bebasneuebook;
+  border: unset;
+  color: black;
+  border-bottom: 2px solid black;
+  padding-left: .5em;
 }
 
 .busket {
@@ -547,8 +566,24 @@ input {
 .buttons_container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 1.15385vw 0;
+}
+
+.buttons_container__total_price {
+  font-family: bebasneuebook;
+  font-size: 32px;
+}
+
+.buttons_container__total_price_value {
+  font-weight: bold;
+}
+
+.buttons_container--darkened {
+  background-color: #f7f7f7;
+  padding: 2.30769vw;
+  box-sizing: border-box;
 }
 
 .modal {
@@ -802,6 +837,15 @@ input {
     font-size: 12px;
   }
 
+  .buttons_container__total_price {
+    font-size: 14px;
+  }
+
+  .buttons_container--fullsize {
+    min-width: 100vw;
+    margin-left: -7.69231vw;
+  }
+
   .modal__product {
     width: 90%;
     margin-left: 0;
@@ -869,6 +913,11 @@ input {
 
   .product__price {
     font-size: 14px;
+  }
+
+  .buttons_container--fullsize {
+    min-width: 100vw;
+    margin-left: -15.38462vw;
   }
 
   .table {
