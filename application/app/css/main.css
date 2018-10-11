@@ -78,7 +78,6 @@ input {
   height: 7.69231vw;
   z-index: 1;
   cursor: pointer;
-  background: pink;
   box-shadow: 0px 0px 6px grey;
   border-radius: 5px;
 }
@@ -172,12 +171,16 @@ input {
 
 .header__arrow {
   padding: 0 1.15385vw;
+  padding-bottom: 3px;
+  font-weight: 100;
+  font-size: .75em;
 }
 
 .header__current_page {
-  color: #8a8a8a;
+  color: #ababab;
   font-weight: lighter;
   font-size: .7em;
+  padding-top: 1px;
 }
 
 .header__subtitle {
@@ -220,8 +223,8 @@ input {
 .counter__value {
   border: 0;
   outline: none;
-  border-top: 1px solid #8a8a8a;
-  border-bottom: 1px solid #8a8a8a;
+  border-top: 1px solid #ababab;
+  border-bottom: 1px solid #ababab;
   width: 40%;
   text-align: center;
 }
@@ -231,14 +234,14 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #8a8a8a;
+  border: 1px solid #ababab;
   width: 30%;
   cursor: pointer;
 }
 
 .counter__decrementer:hover,
 .counter__incrementer:hover {
-  background: pink;
+  color: white;
 }
 
 .counter--small {
@@ -252,20 +255,23 @@ input {
   align-items: center;
   height: 58px;
   width: 200px;
-  background: pink;
   color: white;
   cursor: pointer;
-  border: 1px solid pink;
+  border: 1px solid transparent;
 }
 
 .button:hover {
-  color: pink;
   background: white;
+}
+
+.button:hover .button__add_icon {
+  filter: brightness(100%) invert(0);
 }
 
 .button__add_icon {
   padding-right: 10px;
   margin-left: -5px;
+  filter: brightness(0%) invert(1);
 }
 
 .button__arrow {
@@ -278,8 +284,6 @@ input {
 .button--forward {
   width: auto;
   height: auto;
-  background: none;
-  color: pink;
 }
 
 .busket {
@@ -293,6 +297,7 @@ input {
 
 .busket__icon {
   padding: 0 5px;
+  filter: brightness(0%) invert(1);
 }
 
 .busket:hover {
@@ -300,8 +305,8 @@ input {
   color: #131313;
 }
 
-.busket:hover img {
-  filter: brightness(0);
+.busket:hover .busket__icon {
+  filter: brightness(100%) invert(0);
 }
 
 .logo {
@@ -342,6 +347,7 @@ input {
 
 .phone__icon {
   padding: 5px;
+  filter: brightness(0%) invert(1);
 }
 
 .phone:hover {
@@ -350,7 +356,7 @@ input {
 }
 
 .phone:hover .phone__icon {
-  filter: brightness(0);
+  filter: brightness(100%) invert(0);
 }
 
 .social {
@@ -361,19 +367,19 @@ input {
 
 .social__item {
   padding: 2vh;
+  cursor: pointer;
 }
 
 .social__item__icon {
-  cursor: pointer;
+  filter: brightness(0%) invert(1);
 }
 
 .social__item:hover {
   background: white;
-  color: #131313;
 }
 
 .social__item:hover .social__item__icon {
-  filter: brightness(0);
+  filter: brightness(100%) invert(0);
 }
 
 .category {
@@ -390,12 +396,10 @@ input {
 
 .category__item--active {
   font-weight: bold;
-  background: pink;
   color: white;
 }
 
 .category__item:hover {
-  background: pink;
   color: white;
 }
 
@@ -415,14 +419,6 @@ input {
   cursor: pointer;
   padding: 5px;
   white-space: nowrap;
-}
-
-.nav_panel__sort_item--active {
-  color: pink;
-}
-
-.nav_panel__sort_item:hover {
-  color: pink;
 }
 
 .card {
@@ -450,7 +446,6 @@ input {
   bottom: 0;
   height: 40px;
   width: 40px;
-  background: pink;
 }
 
 .card__name {
@@ -463,6 +458,10 @@ input {
 
 .card:hover .card__add_mini_button {
   display: flex;
+}
+
+.card:hover .card__icon {
+  filter: brightness(0%) invert(1);
 }
 
 .product {
@@ -488,7 +487,7 @@ input {
 .product__name {
   font-size: 28px;
   padding-bottom: 0.57692vw;
-  border-bottom: 1px solid #8a8a8a;
+  border-bottom: 1px solid #ababab;
 }
 
 .product__price {
@@ -506,7 +505,7 @@ input {
 
 .product__text {
   font-size: 14px;
-  color: #8a8a8a;
+  color: #ababab;
   width: 48%;
 }
 
@@ -520,7 +519,7 @@ input {
 }
 
 .product__list {
-  color: #8a8a8a;
+  color: #ababab;
   padding: 0.57692vw 0;
 }
 
@@ -540,7 +539,7 @@ input {
 }
 
 .product__article {
-  color: #8a8a8a;
+  color: #ababab;
   padding: 0.57692vw 0;
   font-size: 14px;
 }
@@ -608,7 +607,7 @@ input {
   display: flex;
   justify-content: space-between;
   padding: 1.15385vw;
-  border-bottom: 1px solid rgba(138, 138, 138, 0.25);
+  border-bottom: 1px solid rgba(171, 171, 171, 0.25);
 }
 
 .table__row--head {

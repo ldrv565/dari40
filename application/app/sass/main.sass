@@ -21,7 +21,7 @@ $offset: $atom * .3
 //</сетка>
 //<цвета>
 $grey: #131313
-$light_grey: #8a8a8a
+$light_grey: #ababab
 //</цвета>
 //<брейкпоинты>
 $extra_large: "max-width: 1550px"
@@ -87,7 +87,6 @@ input
     height: $atom * 2
     z-index: 1
     cursor: pointer
-    background: pink
     box-shadow: 0px 0px 6px grey
     border-radius: 5px
     &__icon
@@ -168,10 +167,14 @@ input
             font-size: 16px
     &__arrow
         padding: 0 $offset
+        padding-bottom: 3px
+        font-weight: 100
+        font-size: .75em
     &__current_page
         color: $light_grey
         font-weight: lighter
         font-size: .7em
+        padding-top: 1px
     &__subtitle
         display: flex
         justify-content: space-between
@@ -227,7 +230,7 @@ input
         width: 30%
         cursor: pointer
         &:hover
-            background: pink
+            color: white
     &--small
         height: 40px
         width: 100px
@@ -237,16 +240,17 @@ input
     align-items: center
     height: 58px
     width: 200px
-    background: pink
     color: white
     cursor: pointer
-    border: 1px solid pink
+    border: 1px solid transparent
     &:hover
-        color: pink
         background: white
+        .button__add_icon
+            filter: brightness(100%) invert(0) 
     &__add_icon
         padding-right: 10px
         margin-left: -5px
+        filter: brightness(0%) invert(1) 
     &__arrow
         padding: 10px
         font-size: 16px
@@ -254,8 +258,6 @@ input
     &--previous, &--forward
         width: auto
         height: auto
-        background: none
-        color: pink
     @media($medium)
         width: 120px
         font-size: 12px
@@ -271,11 +273,12 @@ input
     cursor: pointer
     &__icon
         padding: 0 5px
+        filter: brightness(0%) invert(1) 
     &:hover
         background: white
         color: $grey
-        img
-            filter: brightness(0)
+        .busket__icon
+            filter: brightness(100%) invert(0) 
 .logo
     display: block
     &__title
@@ -306,26 +309,27 @@ input
     margin: 0 -2vh
     &__icon
         padding: 5px
+        filter: brightness(0%) invert(1) 
     @media($large)
         font-size: 12px
     &:hover
         background: white
         color: $grey
         .phone__icon
-            filter: brightness(0)
+            filter: brightness(100%) invert(0) 
 .social
     display: flex
     justify-content: center
     width: 100%
     &__item
         padding: 2vh
+        cursor: pointer
         &__icon
-            cursor: pointer
+            filter: brightness(0%) invert(1) 
         &:hover
             background: white
-            color: $grey
             .social__item__icon
-                filter: brightness(0)            
+                filter: brightness(100%) invert(0) 
     //</блоки_header>
     //<блоки_container_header>
 .category
@@ -338,10 +342,8 @@ input
         cursor: pointer
         &--active
             font-weight: bold
-            background: pink
             color: white
         &:hover
-            background: pink
             color: white
 .nav_panel
     display: flex
@@ -355,10 +357,6 @@ input
         cursor: pointer
         padding: 5px
         white-space: nowrap
-        &--active
-            color: pink
-        &:hover
-            color: pink
     @media ($large)
         width: 80px
     //</блоки_container_header>
@@ -390,7 +388,6 @@ input
         bottom: 0
         height: 40px
         width: 40px
-        background: pink
     &__name
         padding: $offset*.5
     &__price
@@ -398,6 +395,8 @@ input
     &:hover
         .card__add_mini_button
             display: flex
+        .card__icon
+            filter: brightness(0%) invert(1) 
     @media ($large)
         width: 32.5%
         margin: .416%

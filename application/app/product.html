@@ -6,10 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/gift.png" type="image/x-icon">
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/script.js"></script>
     <title>Мультиподарки</title>
+    <style>
+        .c,
+        .hc:hover {
+            color: rgb(132, 123, 186);
+        }
+        
+        .bgc,
+        .bghc:hover {
+            background-color: rgb(132, 123, 186);
+        }
+        
+        .bdc,
+        .bdhc:hover {
+            border-color: rgb(132, 123, 186);
+        }
+    </style>
 </head>
 
 <body>
@@ -18,7 +34,7 @@
         <div class="aside__header">
             <a class="busket" href="busket.html">
                 <div class="busket__icon">
-                    <img src="/images/icon.png" alt="icon">
+                    <img src="img/icon.png" alt="icon">
                 </div>
                 <span> Корзина</span>
             </a>
@@ -51,22 +67,22 @@
         </div>
         <div class="aside__footer">
             <a class="phone" href="tel:+8(953)954-81-61">
-                <img class="phone__icon" src="/images/icon.png" alt="icon"> <span>8 (953) 954-81-61</span>
+                <img class="phone__icon" src="img/phone.png" alt="icon"> <span>8 (953) 954-81-61</span>
             </a>
             <div class="social">
                 <a class="social__item" href="#">
-                    <img class="social__item__icon" src="/images/icon.png" alt="icon">
+                    <img class="social__item__icon" src="img/vk.png" alt="icon">
                 </a>
                 <a class="social__item" href="#">
-                    <img class="social__item__icon" src="/images/icon.png" alt="icon">
+                    <img class="social__item__icon" src="img/ok.png" alt="icon">
                 </a>
                 <a class="social__item" href="#">
-                    <img class="social__item__icon" src="/images/icon.png" alt="icon">
+                    <img class="social__item__icon" src="img/mail.png" alt="icon">
                 </a>
             </div>
         </div>
     </header>
-    <div class="opener">
+    <div class="opener bgc">
         <div class="opener__icon">
             <div class="icon_sticks">
 
@@ -77,20 +93,20 @@
     <main class="container">
         <header class="header">
             <div class="header__title">
-                <h2>Мультиподарки</h2><img class="header__arrow" src="/images/icon.png" alt="icon"><span class="header__current_page">Мега</span>
+                <h2>Мультиподарки</h2><span class="header__arrow c">&#10140;</span><span class="header__current_page">Мега</span>
             </div>
             <div class="header__subtitle">
                 <div class="category">
-                    <div class="category__item">Все подарки</div>
-                    <div class="category__item">Для мужчин</div>
-                    <div class="category__item category__item--active">Для женщин</div>
+                    <div class="category__item bghc">Все подарки</div>
+                    <div class="category__item bghc">Для мужчин</div>
+                    <div class="category__item bghc category__item--active bgc">Для женщин</div>
                 </div>
             </div>
         </header>
         <div class="main">
             <div class="product">
                 <div class="product__image_wrap">
-                    <img class="product__img" src="images/man.jpg" alt="man">
+                    <img class="product__img" src="img/man.jpg" alt="man">
                 </div>
                 <div class="product__content">
                     <h3 class="product__name">
@@ -116,31 +132,31 @@
                         Включает
                         <div class="product__list">
                             <div class="product__list_item">
-                                <img class="product__list_icon" src="/images/icon.png" alt="icon"> Комплексная мойка автомобиля
+                                <img class="product__list_icon" src="img/gift.png" alt="icon"> Комплексная мойка автомобиля
                             </div>
                             <div class="product__list_item">
-                                <img class="product__list_icon" src="/images/icon.png" alt="icon"> Урок скалолазанья
+                                <img class="product__list_icon" src="img/gift.png" alt="icon"> Урок скалолазанья
                             </div>
                             <div class="product__list_item">
-                                <img class="product__list_icon" src="/images/icon.png" alt="icon"> Лучики солнца
+                                <img class="product__list_icon" src="img/gift.png" alt="icon"> Лучики солнца
                             </div>
                             <div class="product__list_item">
-                                <img class="product__list_icon" src="/images/icon.png" alt="icon"> Ловись рыбка
+                                <img class="product__list_icon" src="img/gift.png" alt="icon"> Ловись рыбка
                             </div>
                         </div>
                     </div>
                     <div class="product__buttons_container">
                         <div class="counter">
-                            <div class="counter__decrementer">
+                            <div class="counter__decrementer bghc">
                                 -
                             </div>
                             <input class="counter__value" value="1">
-                            <div class="counter__incrementer">
+                            <div class="counter__incrementer bghc">
                                 +
                             </div>
                         </div>
-                        <div class="button">
-                            <img class="button__add_icon" src="/images/icon.png" alt="icon"> В КОРЗИНУ
+                        <div class="button bgc bdc hc">
+                            <img class="button__add_icon" src="img/icon.png" alt="icon"> В КОРЗИНУ
                         </div>
                     </div>
                     <div class="product__article">
@@ -149,10 +165,10 @@
                 </div>
             </div>
             <div class="buttons_container">
-                <a class="button button--previous" href="#">
+                <a class="button button--previous c" href="#">
                     <span class="button__arrow">&lt;</span> ВЕРНУТЬСЯ
                 </a>
-                <a class="button button--forward" href="#">
+                <a class="button button--forward c" href="#">
                     СЛЕДУЮЩИЙ <span class="button__arrow"> ></span>
                 </a>
             </div>
