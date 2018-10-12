@@ -730,6 +730,11 @@ input {
   font-weight: bold;
 }
 
+.content {
+  flex-basis: 800px;
+  line-height: 1.5em;
+}
+
 @media (max-width: 1550px) {
   .aside {
     font-size: 13px;
