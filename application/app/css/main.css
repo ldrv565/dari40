@@ -291,9 +291,13 @@ input {
 .button--previous,
 .button--forward {
   font-family: bebasneuebook;
-  font-size: 1.5em;
+  font-size: 24px;
   width: auto;
   height: auto;
+}
+
+.button--color--black {
+  color: black;
 }
 
 .button--promo {
@@ -735,6 +739,30 @@ input {
   line-height: 1.5em;
 }
 
+.promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 24px;
+  height: 60vh;
+  min-height: 260px;
+  font-family: bebasneueregular;
+}
+
+.promo__item {
+  padding: 1.15385vw;
+  width: 100%;
+}
+
+.promo__item--category {
+  font-size: 3em;
+}
+
+.promo__item--name {
+  font-size: 6em;
+  color: white;
+}
+
 @media (max-width: 1550px) {
   .aside {
     font-size: 13px;
@@ -829,6 +857,10 @@ input {
     width: 3.84615vw;
     height: 3.84615vw;
   }
+
+  .promo {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -859,7 +891,7 @@ input {
 
   .button {
     width: 120px;
-    font-size: 12px;
+    font-size: 14px;
     height: 38px;
   }
 
@@ -927,6 +959,18 @@ input {
     max-width: 70px;
     max-height: 30px;
   }
+
+  .promo {
+    font-size: 16px;
+  }
+
+  .promo__item--category {
+    font-size: 1.5em;
+  }
+
+  .promo__item--name {
+    font-size: 3em;
+  }
 }
 
 @media (max-width: 480px) {
@@ -983,5 +1027,9 @@ input {
   .table__name {
     max-width: 96px;
     overflow: hidden;
+  }
+
+  .promo__item {
+    background: white;
   }
 }
