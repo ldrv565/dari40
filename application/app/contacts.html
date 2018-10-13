@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="img/gift.png" type="image/x-icon">
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/script.js"></script>
-    <title>О нас</title>
+    <title>Контакты</title>
     <style>
         .c,
         .hc:hover {
@@ -28,7 +28,7 @@
     </style>
 </head>
 
-<body style="background: url('img/bg2.jpg') 100%  0">
+<body>
     <!--меню-->
     <header class="aside">
         <div class="aside__header">
@@ -90,26 +90,31 @@
         </div>
     </div>
     <!--/меню-->
-    <main class="container">
+    <main class="container container--width--min_content">
+        <header class="header">
+            <div class="header__title">
+                <h2>Контакты</h2>
+            </div>
+        </header>
         <div class="main">
-            <div class="promo">
-                <h2 class="promo__item promo__item--category">
-                    Мультиподарок
-                </h2>
-                <h3 class="promo__item promo__item--name bgc">
-                    <strong>МЕГА АЛЬФАЧ</strong>
-                </h3>
-                <span class="promo__item">
-                    <strong>НАСТОЯЩИЙ МУЖЧИНА</strong> СИЛЕН, СТОЕК, ВЫНОСЛИВ.
-                </span>
-                <div class="buttons_container promo__item">
-                    <a class="button button--forward button--color--black" href="catalog.html">
-                        <strong>В КАТАЛОГ</strong><span class="button__arrow button__arrow--forward">∟</span>
-                    </a>
+            <div class="contacts">
+                <div class="contacts__item contacts__item--name">
+                    АДРЕС:
+                </div>
+                <div class="contacts__item contacts__item--value">
+                    <p>г.Калуга</p>
+                    <p>ул. Кирова, д. 59 стр. 1</p>
+                </div>
+                <div class="contacts__item contacts__item--name">
+                    ТЕЛЕФОН:
+                </div>
+                <div class="contacts__item contacts__item--value">
+                    <p>8 (964) 142-11-30</p>
                 </div>
             </div>
         </div>
     </main>
+    <iframe class="map" src="https://yandex.ru/map-widget/v1/-/CBBSFQvcGC" allowfullscreen="true"></iframe>
 </body>
 
 </html>

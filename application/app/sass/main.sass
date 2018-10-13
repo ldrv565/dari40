@@ -155,6 +155,18 @@ input
         width: $container_width + 2.5 * $atom
     @media($small)
         width: $container_width + 1 * $atom
+    &--width--min_content
+        max-width: 255px
+        right: auto
+        left: 5*$atom
+        @media($large)
+            left: 6*$atom
+        @media($medium)
+            max-width: 170px
+            left: 3*$atom
+        @media($small)
+            left: 9*$atom
+
 
 .header
     font-family: bebasneueregular
@@ -474,7 +486,11 @@ input
     &__list
         color: $light_grey
         padding: $offset/2 0
+        &_icon
+            padding-right: $offset/2
     &__list_item
+        display: flex
+        align-items: center
         padding: $offset/4 0
     &__buttons_container
         display: flex
@@ -672,6 +688,7 @@ input
     height: 60vh
     min-height: 260px
     font-family: bebasneueregular
+    line-height: .9
     @media($large)
         font-size: 18px
     @media($medium)
@@ -680,15 +697,46 @@ input
         padding: $offset
         width: 100%
         @media($small)
-            background: white
+            background: rgba(white,.4)
         &--category
             font-size: 3em
             @media($medium)
                 font-size: 1.5em
         &--name
-            font-size: 6em
+            font-size: 5em
             color: white
             @media($medium)
                 font-size: 3em
+.contacts
+    width: 200px
+    box-shadow: 0px 0px 20px rgba($grey, .2)
+    padding: $offset
+    margin-left: $offset
+    font-weight: bold
+    background: #fff
+    @media($medium)
+        font-size: 12px
+        width: 150px
+    &__item
+        &--name
+            font-family: bebasneueregular
+            font-size: 1.4em
+        &--value
+            padding: $offset 0
+            p
+                margin: 0
+.map
+    position: absolute
+    left: 4 * $atom
+    right: 0
+    width: 22 * $atom
+    top: 0
+    height: 100%
+    z-index: -1
+    filter: grayscale(90%)
+    border: 0
+    @media($medium)
+    left: 0 * $atom
+    width: 100vw
     //</блоки_container_main>
 //</блоки>
