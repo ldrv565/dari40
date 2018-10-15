@@ -808,8 +808,6 @@ input {
   z-index: -1;
   filter: grayscale(90%);
   border: 0;
-  left: 0vw;
-  width: 100vw;
 }
 
 @media (max-width: 1550px) {
@@ -1033,6 +1031,11 @@ input {
   .contacts {
     font-size: 12px;
     width: 150px;
+  }
+
+  .map {
+    left: 0vw;
+    width: 100vw;
   }
 }
 
