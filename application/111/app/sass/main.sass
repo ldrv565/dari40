@@ -60,7 +60,6 @@ input
     width: $aside_width
     background: $grey
     color: white
-    overflow: auto
     &__header
         text-align: center
     &__footer
@@ -191,7 +190,6 @@ input
         padding-top: 1px
     &__subtitle
         display: flex
-        flex-wrap: wrap
         justify-content: space-between
         font-family: bebasneuebook
         font-size: 21px       
@@ -376,28 +374,19 @@ input
         &:hover
             color: white
 .nav_panel
-    position: relative
     display: flex
+    text-align: center
+    justify-content: center
     flex-wrap: wrap
-    cursor: pointer
     &__sort_label
         font-weight: bold
         padding: 5px
     &__sort_item
-        display: block
+        cursor: pointer
         padding: 5px
         white-space: nowrap
-    &__box
-        position: absolute
-        display: none
-        top: 35px
-        right: 0
-        z-index: 2
-        background: white
-        @media($small)
-            top: 27px
-        &.--opened
-            display: block
+    @media ($large)
+        width: 80px
     //</блоки_container_header>
     //<блоки_container_main>
 .card
@@ -411,13 +400,13 @@ input
     margin: .5%
     margin-bottom: $offset
     &__image
-        height: 4.9 * $atom
+        height: 5.5 * $atom
         @media ($large)
-            height: 6.2 * $atom
+            height: 7 * $atom
         @media ($medium)
-            height: 7.5 * $atom
+            height: 8.5 * $atom
         @media ($small)
-            height: 10.6 * $atom
+            height: 11.5 * $atom
     &__add_mini_button
         position: absolute
         display: none
@@ -440,11 +429,6 @@ input
         width: 32.5%
         margin: .416%
         font-size: 14px
-    @media($medium)
-        .card__add_mini_button
-            display: flex
-        .card__icon
-            filter: brightness(0%) invert(1) 
     @media ($small)
         width: 49%
         margin: .5%
