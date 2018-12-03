@@ -33,10 +33,24 @@ $small: "max-width: 480px"
 body
     font-family: gothamprolighter   
     margin: 0
+
+.body_back
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: white
+    opacity: 0.7
+
 a
     text-decoration: none
     color: inherit
-h1, h2, h3
+h1
+    font-size: inherit
+    font-weight: unset
+
+h2, h3
     margin: 0
     font-size: inherit
     font-weight: unset
@@ -49,9 +63,6 @@ input
 //<основные_контейнеры>
 .aside
     position: fixed
-    display: flex
-    flex-direction: column
-    justify-content: space-between
     top: 0
     left: 0 
     bottom: 0
@@ -60,7 +71,16 @@ input
     width: $aside_width
     background: $grey
     color: white
-    overflow: auto
+    overflow: hidden
+    &__box
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+        max-height: 100%
+        overflow: auto
+        padding-right: 50px
+        margin-right: -50px
     &__header
         text-align: center
     &__footer
@@ -206,6 +226,8 @@ input
     justify-content: flex-start
     flex-wrap: wrap
     margin: $offset 0
+    &.--promo
+        height: 80vh
 //</основные_контейнеры>
 
 //<блоки>
@@ -301,9 +323,20 @@ input
     width: 100%
     padding: 2vh 0
     cursor: pointer
+    &__wrap
+        position: relative
+        margin-right: 5px
     &__icon
         padding: 0 5px
         filter: brightness(0%) invert(1) 
+    &__count
+        position: absolute
+        top: -4px
+        right: -4px
+        font-size: 12px
+        padding: 2px 6px
+        border-radius: 10px
+        color: white
     &:hover
         background: white
         color: $grey
@@ -313,6 +346,7 @@ input
     display: block
     &__title
         font-size: 42px
+        margin: 0
         @media($extra_large)
             font-size: 32px
         @media($large)
@@ -325,7 +359,7 @@ input
     &__item
         display: block
         padding: 2vh 0
-        &:hover
+        &:hover, &.--active
             background: white
             color: $grey
     @media($large)
@@ -435,7 +469,9 @@ input
         .card__add_mini_button
             display: flex
         .card__icon
-            filter: brightness(0%) invert(1) 
+            filter: brightness(0%) invert(1)
+    &--hidden
+        display: none
     @media ($large)
         width: 32.5%
         margin: .416%
@@ -701,14 +737,13 @@ input
     flex-direction: column
     justify-content: flex-end
     font-size: 24px
-    height: 60vh
-    min-height: 260px
     font-family: bebasneueregular
     line-height: .9
-    @media($large)
-        font-size: 18px
-    @media($medium)
-        font-size: 16px
+    opacity: 0
+    margin-top: auto
+    margin-bottom: auto
+    &:first-child
+        opacity: 1
     &__item
         padding: $offset
         width: 100%
@@ -723,6 +758,28 @@ input
             color: white
             @media($medium)
                 font-size: 3em
+    &--hidden
+        display: none
+    @media($large)
+        font-size: 18px
+    @media($medium)
+        font-size: 16px
+.description
+    padding: $offset
+    color: $light_grey
+    background: $grey
+    overflow: hidden
+    min-width: 250px
+    margin-bottom: auto
+    @media($small)
+        font-size: 12px
+    &__box
+        max-height: 25vh
+        overflow: auto
+        padding-right: 50px
+        margin-right: -50px
+    p
+        margin: 0
 .contacts
     width: 200px
     box-shadow: 0px 0px 20px rgba($grey, .2)

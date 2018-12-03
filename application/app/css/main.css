@@ -21,12 +21,26 @@ body {
   margin: 0;
 }
 
+.body_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.7;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-h1,
+h1 {
+  font-size: inherit;
+  font-weight: unset;
+}
+
 h2,
 h3 {
   margin: 0;
@@ -45,9 +59,6 @@ input {
 
 .aside {
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   top: 0;
   left: 0;
   bottom: 0;
@@ -56,7 +67,18 @@ input {
   width: 15.38462vw;
   background: #131313;
   color: white;
+  overflow: hidden;
+}
+
+.aside__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-height: 100%;
   overflow: auto;
+  padding-right: 50px;
+  margin-right: -50px;
 }
 
 .aside__header {
@@ -207,6 +229,10 @@ input {
   margin: 1.15385vw 0;
 }
 
+.main.--promo {
+  height: 80vh;
+}
+
 .image {
   position: relative;
   width: 100%;
@@ -327,9 +353,24 @@ input {
   cursor: pointer;
 }
 
+.busket__wrap {
+  position: relative;
+  margin-right: 5px;
+}
+
 .busket__icon {
   padding: 0 5px;
   filter: brightness(0%) invert(1);
+}
+
+.busket__count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  color: white;
 }
 
 .busket:hover {
@@ -347,6 +388,7 @@ input {
 
 .logo__title {
   font-size: 42px;
+  margin: 0;
 }
 
 .logo:hover {
@@ -363,7 +405,8 @@ input {
   padding: 2vh 0;
 }
 
-.menu__item:hover {
+.menu__item:hover,
+.menu__item.--active {
   background: white;
   color: #131313;
 }
@@ -507,6 +550,10 @@ input {
 
 .card:hover .card__icon {
   filter: brightness(0%) invert(1);
+}
+
+.card--hidden {
+  display: none;
 }
 
 .product {
@@ -771,10 +818,15 @@ input {
   flex-direction: column;
   justify-content: flex-end;
   font-size: 24px;
-  height: 60vh;
-  min-height: 260px;
   font-family: bebasneueregular;
   line-height: .9;
+  opacity: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.promo:first-child {
+  opacity: 1;
 }
 
 .promo__item {
@@ -789,6 +841,30 @@ input {
 .promo__item--name {
   font-size: 5em;
   color: white;
+}
+
+.promo--hidden {
+  display: none;
+}
+
+.description {
+  padding: 1.15385vw;
+  color: #ababab;
+  background: #131313;
+  overflow: hidden;
+  min-width: 250px;
+  margin-bottom: auto;
+}
+
+.description__box {
+  max-height: 25vh;
+  overflow: auto;
+  padding-right: 50px;
+  margin-right: -50px;
+}
+
+.description p {
+  margin: 0;
 }
 
 .contacts {
@@ -1035,16 +1111,16 @@ input {
     max-height: 30px;
   }
 
-  .promo {
-    font-size: 16px;
-  }
-
   .promo__item--category {
     font-size: 1.5em;
   }
 
   .promo__item--name {
     font-size: 3em;
+  }
+
+  .promo {
+    font-size: 16px;
   }
 
   .contacts {
@@ -1124,5 +1200,9 @@ input {
 
   .promo__item {
     background: rgba(255, 255, 255, 0.4);
+  }
+
+  .description {
+    font-size: 12px;
   }
 }
