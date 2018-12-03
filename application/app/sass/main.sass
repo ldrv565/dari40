@@ -490,11 +490,6 @@ input
     flex-wrap: wrap
     justify-content: space-between
     width: 100%
-    &__image_wrap
-        flex-basis: 36%
-    &__img
-        width: 100%
-        height: auto
     &__content
         flex-basis: 62% 
         @media($medium)
@@ -557,6 +552,60 @@ input
         color: $light_grey
         padding: $offset/2 0
         font-size: 14px
+.gallery
+    width: 36%
+    font-size: 0
+    &__main_image
+        width: 100%
+        height: 7 * $atom
+        margin: auto
+        @media($medium)
+            width: 10 * $atom
+            height: 10 * $atom    
+    &__image
+        display: inline-block
+        width: 2 * $atom
+        height: 2 * $atom
+        margin-right: 5px
+        @media($medium)
+            width: 4 * $atom
+            height: 4 * $atom    
+    &__wrap_box
+        display: inline-block
+        width: 85%
+        max-width: 85%
+        overflow: hidden
+        @media($medium)
+            width: 100%
+            max-width: 100%
+    &__box
+        margin-top: $atom/4
+        height: 2 * $atom
+        white-space: nowrap
+        overflow: hidden
+        overflow-x: auto
+        padding-bottom: 50px
+        margin-bottom: -50px
+        @media($medium)
+            height: 4 * $atom   
+    &__arrow 
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 7.5%
+        height: 2 * $atom
+        vertical-align: top
+        margin-top: $atom/4
+        cursor: pointer
+        font-size: 21px
+        color: $grey
+        user-select: none
+        &:hover
+            box-shadow: 0 0 2px $light_grey
+        @media($medium)
+            display: none
+    @media($medium)
+        width: 100%
 .buttons_container
     display: flex
     justify-content: space-between

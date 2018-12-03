@@ -5,6 +5,7 @@ $("document").ready(function() {
     if (window.location.href === "http://localhost:3000/index.html") {
         imageAdapt();
     }
+    slider()
 })
 
 function menuToggle() {
@@ -89,4 +90,43 @@ function sortToggle() {
     $sort.click(function() {
         $sortList.toggleClass("--opened")
     })
+}
+
+var currentIndex = 0
+var sliderLegth = 0
+
+function slider() {
+    let $button = $(".gallery__arrow")
+
+    sliderLegth = $(".gallery__image").length
+
+    $button.click(function() {
+        if ($(this).hasClass("--left")) {
+            if (currentIndex < 1) {
+                arrowClick(sliderLegth - 3)
+            } else {
+                arrowClick(currentIndex - 1)
+            }
+        } else {
+            if (currentIndex > sliderLegth - 4) {
+                arrowClick(0)
+            } else {
+                arrowClick(currentIndex + 1)
+            }
+        }
+    })
+}
+
+function arrowClick(i) {
+    slide(i)
+    currentIndex = i
+    console.log(i)
+}
+
+
+function slide(index) {
+    let scrollWidth = $(".gallery__image").eq(index)[0].scrollWidth + 5
+    $('.gallery__box').animate({
+        scrollLeft: scrollWidth * index
+    }, 200);
 }
