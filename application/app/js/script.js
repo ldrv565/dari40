@@ -2,8 +2,20 @@ $("document").ready(function() {
     menuToggle();
     modalToggle();
     sortToggle();
-    imageAdapt();
-    slider()
+    // imageAdapt();
+    slider();
+    $(".order").click(function() {
+        toggleModalPopup("--order")
+    })
+    $(".registration").click(function() {
+        toggleModalPopup("--registration")
+    })
+    $(".login").click(function() {
+        toggleModalPopup("--login")
+    })
+    $(".modal_popup").click(function() {
+        toggleModalPopup(currentModalType)
+    })
 })
 
 function menuToggle() {
@@ -44,7 +56,6 @@ function modalToggle() {
             modal.toggleClass(modalHiddenClass);
         }
     })
-
 }
 
 function imageAdapt() {
@@ -127,4 +138,14 @@ function slide(index) {
     $('.gallery__box').animate({
         scrollLeft: scrollWidth * index
     }, 200);
+}
+
+var currentModalType
+
+toggleModalPopup = function(type) {
+    if (!$(event.target).closest(".modal_popup__window").length) {
+        $(".modal_popup").toggleClass("--opened")
+        $("." + type).toggleClass("--opened")
+        currentModalType = type
+    }
 }

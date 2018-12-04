@@ -726,6 +726,7 @@ input {
   height: 100vh;
   width: 100vw;
   background: rgba(19, 19, 19, 0.5);
+  z-index: 2;
 }
 
 .modal--hidden {
@@ -761,6 +762,63 @@ input {
 .modal__product__content {
   flex-basis: 48%;
   padding-left: 10px;
+}
+
+.modal_popup {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  z-index: 3;
+}
+
+.modal_popup__window {
+  display: none;
+  width: 250px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+  background: white;
+}
+
+.modal_popup__window.--opened {
+  display: block;
+}
+
+.modal_popup__input,
+.modal_popup__text {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid black;
+  padding: 10px 0;
+  text-align: center;
+  font-family: gothamprolighter;
+}
+
+.modal_popup__text {
+  width: 90%;
+  margin-top: 20px;
+  padding: 0;
+  border: 1px solid black;
+  text-align: left;
+  height: 80px;
+  font-size: 12px;
+  resize: none;
+  outline: none;
+  padding: 5%;
+}
+
+.modal_popup__button {
+  margin-top: 20px;
+  min-width: 100%;
+}
+
+.modal_popup.--opened {
+  display: flex;
 }
 
 .table {
@@ -1167,6 +1225,14 @@ input {
   .modal__product {
     width: 90%;
     margin-left: 0;
+  }
+
+  .modal_popup__window {
+    padding: 20px;
+  }
+
+  .modal_popup__text {
+    height: 30px;
   }
 
   .table {

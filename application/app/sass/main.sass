@@ -649,6 +649,7 @@ input
     height: 100vh
     width: 100vw
     background: rgba($grey, .5) 
+    z-index: 2
     &--hidden
         display: none
     &__product
@@ -688,6 +689,53 @@ input
         @media($medium)
             width: 90%
             margin-left: 0
+.modal_popup
+    position: fixed
+    display: none
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(black, .4)
+    text-align: center
+    z-index: 3
+    &__window
+        display: none
+        width: 250px
+        margin: auto
+        padding: 40px
+        border-radius: 10px
+        background: white
+        @media($medium)
+            padding: 20px
+        &.--opened
+            display: block
+    &__input, &__text
+        width: 100%
+        border: 0
+        border-bottom: 2px solid black
+        padding: 10px 0
+        text-align: center
+        font-family: gothamprolighter
+    &__text
+        width: 90%
+        margin-top: 20px
+        padding: 0
+        border: 1px solid black
+        text-align: left
+        height: 80px
+        font-size: 12px
+        resize: none
+        outline: none
+        padding: 5%
+        @media($medium)
+            height: 30px
+    &__button
+        margin-top: 20px
+        min-width: 100% 
+    &.--opened
+        display: flex
+
 .table
     width: 100%
     @media($large)

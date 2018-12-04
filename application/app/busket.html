@@ -38,10 +38,18 @@
                 </div>
                 <span> Корзина</span>
             </a>
-            <a class="logo" href="index.html">
+            <a class="logo hc" href="index.html">
                 <h1 class="logo__title">DARI40</h1>
                 <span class="logo__subtitle">незабываемые подарки</span>
             </a>
+            <div class="buttons_container">
+                <div class="button hc registration">
+                    Регистрация
+                </div>
+                <div class="button hc login">
+                    Вход
+                </div>
+            </div>
         </div>
         <div class="aside__main">
             <div class="menu">
@@ -250,9 +258,33 @@
                 <span class="buttons_container__total_price">
                     ОБЩАЯ СТОИМОСТЬ: <span class="buttons_container__total_price_value">5 000р</span>
                 </span>
-                <a class="button hc bgc bdc" href="payment.html">
+                <a class="button hc bgc bdc order">
                     ЗАКАЗАТЬ
                 </a>
+            </div>
+        </div>
+        <div class="modal_popup">
+            <div class="modal_popup__window --order"><strong>Order</strong>
+                <input class="modal_popup__input bdc" type="text" placeholder="Full name">
+                <input class="modal_popup__input bdc" type="text" placeholder="e-mail">
+                <input class="modal_popup__input bdc" type="text" placeholder="telephone">
+                <input class="modal_popup__input bdc" type="text" placeholder="delivery adress">
+                <textarea class="modal_popup__text bdc" placeholder="comment..."></textarea>
+                <div class="button modal_popup__button bgc hc bdhc">To order</div>
+            </div>
+            <div class="modal_popup__window --login">
+                <strong>Log in</strong>
+                <input class="modal_popup__input bdc" type="text" placeholder="Full name">
+                <input class="modal_popup__input bdc" type="text" placeholder="e-mail">
+                <div class="button modal_popup__button bgc hc bdhc s2">In</div>
+            </div>
+            <div class="modal_popup__window --registration">
+                <strong>Registration</strong>
+                <input class="modal_popup__input bdc" type="text" placeholder="Full name">
+                <input class="modal_popup__input bdc" type="text" placeholder="e-mail">
+                <input class="modal_popup__input bdc" type="text" placeholder="Phone number">
+                <input class="modal_popup__input bdc" type="text" placeholder="delivery adress">
+                <div class="button modal_popup__button bgc hc bdhc s2">Registration</div>
             </div>
         </div>
     </main>
