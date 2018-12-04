@@ -172,6 +172,7 @@ input {
 .icon_sticks--table {
   margin-top: 25%;
   height: 100%;
+  display: block;
 }
 
 .container {
@@ -649,6 +650,7 @@ input {
   width: 7.69231vw;
   height: 7.69231vw;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .gallery__wrap_box {

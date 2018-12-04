@@ -2,9 +2,7 @@ $("document").ready(function() {
     menuToggle();
     modalToggle();
     sortToggle();
-    if (window.location.href === "http://localhost:3000/index.html") {
-        imageAdapt();
-    }
+    imageAdapt();
     slider()
 })
 
