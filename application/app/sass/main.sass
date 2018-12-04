@@ -31,8 +31,11 @@ $small: "max-width: 480px"
 //</брейкпоинты>
 //<теги>
 body
+    position: relative
     font-family: gothamprolighter   
     margin: 0
+    height: 100%
+    min-height: 100vh
 
 .body_back
     position: absolute
@@ -72,6 +75,7 @@ input
     background: $grey
     color: white
     overflow: hidden
+    z-index: 2
     &__box
         display: flex
         flex-direction: column
@@ -94,7 +98,6 @@ input
     @media($medium)
         left: -150px
         width: 150px
-        z-index: 1
         background: $grey
         &--opened
             left: 0       
@@ -167,28 +170,34 @@ input
         display: block
 
 .container
-    position: absolute
-    top: $atom
-    right: $atom
+    position: relative
+    padding-top: $atom
+    padding-left: $aside_width + $atom
     width: $container_width
+    height: 100%
     @media($large)
+        padding-left: $aside_width + 2.5 * $atom
         width: $container_width - 1.5 * $atom
     @media($medium)
+        padding-left: 2.5 * $atom
         width: $container_width + 2.5 * $atom
     @media($small)
+        padding-left: 4 * $atom
         width: $container_width + 1 * $atom
     &--width--min_content
+        position: absolute
+        top: $atom
+        padding: 0
         max-width: 255px
-        right: auto
-        left: 5*$atom
+        height: auto
+        left: $aside_width + $atom
+        z-index: 1
         @media($large)
-            left: 6*$atom
+            left: 0
+            top: $atom
         @media($medium)
             max-width: 170px
-            left: 3*$atom
-        @media($small)
-            left: 9*$atom
-
+            top: 3 * $atom
 
 .header
     font-family: bebasneueregular
@@ -227,8 +236,6 @@ input
     justify-content: flex-start
     flex-wrap: wrap
     margin: $offset 0
-    &.--promo
-        height: 80vh
 //</основные_контейнеры>
 
 //<блоки>
@@ -815,13 +822,16 @@ input
         font-size: 18px
     @media($medium)
         font-size: 16px
+    @media($small)
+        padding-top: 4 * $atom
+        font-size: 16px
 .description
     padding: $offset
     color: $light_grey
     background: $grey
     overflow: hidden
     min-width: 250px
-    margin-bottom: auto
+    margin-top: $atom
     @media($small)
         font-size: 12px
     &__box
@@ -851,16 +861,19 @@ input
                 margin: 0
 .map
     position: absolute
-    left: 4 * $atom
+    left: $aside_width
     right: 0
     width: 22 * $atom
     top: 0
     height: 100%
-    z-index: -1
+    z-index: 0
     filter: grayscale(90%)
     border: 0
+    @media($large)
+        left: $aside_width + 1.5 * $atom
+        width: 20.5 * $atom
     @media($medium)
-        left: 0 * $atom
-        width: 100vw
+        left: 0
+        width: 100%
     //</блоки_container_main>
 //</блоки>
